@@ -1,35 +1,20 @@
-import { motion } from 'framer-motion'
-import Head from 'next/head'
-import { GridItemStyle } from '../grid-item'
+import { Box, Container } from '@chakra-ui/react'
+import Meta from '../Meta'
+import NavBar from '../Nav'
 
-const variants = {
-    hidden: { opacity: 0, x: 0, y: 20 },
-    enter: { opacity: 1, x: 0, y: 0 },
-    exit: { opacity: 0, x: -0, y: 20 }
-}
-
-const Layout = ({ children, title }) => (
-    <motion.article
-        initial="hidden"
-        animate="enter"
-        exit="exit"
-        variants={variants}
-        transition={{ duration: 0.4, type: 'easeInOut' }}
-        style={{ position: 'relative' }}
-    >
+const Layout = ({ children }) => {
+    return (
         <>
-            {title && (
-                <Head>
-                    <title>{title} - Griveau Jordan</title>
-                    <meta name="twitter:title" content={title} />
-                    <meta property="og:title" content={title} />
-                </Head>
-            )}
-            {children}
+            <Meta />
+            <NavBar />
 
-            <GridItemStyle />
+            <Box as="main" pb={8}>
+                <Container maxW="container.md" pt={14}>
+                    {children}
+                </Container>
+            </Box>
         </>
-    </motion.article>
-)
+    )
+}
 
 export default Layout
