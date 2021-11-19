@@ -1,7 +1,7 @@
 import { Flex } from "@chakra-ui/react"
 
 interface Props {
-
+    currentTab: number,
 }
 
 

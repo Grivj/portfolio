@@ -1,6 +1,9 @@
 import { Box, Flex } from "@chakra-ui/react"
+import { useRouter } from "next/dist/client/router"
 import AppBar from "./AppBar"
+import { AppBarItemProps } from "./AppBarItem"
 import AppBody from "./AppBody"
+
 
 interface Props {
 
@@ -9,12 +12,25 @@ interface Props {
 
 const AppScreen = (props: Props) => {
 
+    const { query } = useRouter();
+
+    const isCurrentTab = (name: string): boolean => {
+        return query.tab == name
+    }
+
+    const tabs: AppBarItemProps[] = [
+        { name: "skills", extension: ".py", file_type: "python", toggled: isCurrentTab("skills") },
+        { name: "interests", extension: ".json", file_type: "tsconfig", toggled: isCurrentTab("interests") },
+        { name: "education", extension: ".md", file_type: "markdown", toggled: isCurrentTab("education") },
+        { name: "experience", extension: ".md", file_type: "markdown", toggled: isCurrentTab("experience") },
+    ]
+
 
     return (
         <Box backgroundColor="#1E1E1E" borderRadius="10px" h="80vh" overflow="hidden">
             <Flex flexDir={"column"}>
-                <AppBar />
-                <AppBody />
+                <AppBar tabs={tabs} />
+                <AppBody currentTab={tabs.findIndex(tab => tab.toggled)} />
             </Flex>
         </Box>
     )
