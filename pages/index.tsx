@@ -1,11 +1,13 @@
+import { Box } from "@chakra-ui/react"
 import AppScreen from '../components/AppScreen'
-import Layout from '../components/layouts/Layout'
-const Home = () => (
-  <Layout>
 
+const Home = () => (
+
+  <Box alignContent="center">
     <AppScreen />
 
-  </Layout>
+  </Box>
+
 )
 
 export default Home

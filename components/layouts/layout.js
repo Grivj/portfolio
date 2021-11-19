@@ -1,16 +1,14 @@
-import { Box, Container } from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react'
 import Meta from '../Meta'
 
-const Layout = ({ children }) => {
+const Layout = ({ children, router }) => {
     return (
         <>
             <Meta />
 
-            <Box as="main" pb={8}>
-                <Container maxWidth="100%">
-                    {children}
-                </Container>
-            </Box>
+            <Container as="main" p="8" maxWidth="100vw" minHeight="100vh">
+                {children}
+            </Container>
         </>
     )
 }

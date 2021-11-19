@@ -1,11 +1,18 @@
-import { Flex } from "@chakra-ui/react"
-
+import { Flex, Box } from "@chakra-ui/react"
+import Code from "./AppCode"
 interface Props {
     tabIndex: number,
 }
 
 const TabContentSkills = () => (
-    <h1>Skills tab</h1>
+    <Flex flexDir="column">
+        <Code line={1} indent={0} code="line of code" type="python"/>
+        <Code line={2} indent={1} code="line of code" type="python"/>
+        <Code line={3} indent={1} code="line of code" type="python"/>
+        <Code line={4} indent={1} code="line of code" type="python"/>
+        <Code line={5} indent={1} code="line of code" type="python"/>
+        <Code line={6} indent={0} code="line of code" type="python"/>
+    </Flex>
 )
 
 
@@ -23,9 +30,9 @@ const AppBody = (props: Props) => {
     }
 
     return (
-        <Flex>
+        <Box p="5">
             {contentSwitch(props.tabIndex)}
-        </Flex>
+        </Box>
     )
 }
 
