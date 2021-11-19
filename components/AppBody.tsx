@@ -6,12 +6,19 @@ interface Props {
 
 const TabContentSkills = () => (
     <Flex flexDir="column">
-        <Code line={1} indent={0} code="line of code" type="python"/>
-        <Code line={2} indent={1} code="line of code" type="python"/>
-        <Code line={3} indent={1} code="line of code" type="python"/>
-        <Code line={4} indent={1} code="line of code" type="python"/>
-        <Code line={5} indent={1} code="line of code" type="python"/>
-        <Code line={6} indent={0} code="line of code" type="python"/>
+        <Code line={1} indent={0} code="deep_learning = {" type="python"/>
+        <Code line={2} indent={1} code='"Python": "~ 2 years",' type="python"/>
+        <Code line={3} indent={1} code='"Pytorch": "~ 2 years",' type="python"/>
+        <Code line={4} indent={0} code="}" type="python"/>
+        <Code line={5} indent={0} code="" type="python"/>
+        <Code line={6} indent={0} code="web_development = {" type="python"/>
+        <Code line={7} indent={1} code='"React": "< 1 year"' type="python"/>
+        <Code line={8} indent={1} code='"Next.js": "< 1 year"' type="python"/>
+        <Code line={9} indent={1} code='"PHP": "~ 5 year"' type="python"/>
+        <Code line={10} indent={1} code='"HTML": "~ 5 year"' type="python"/>
+        <Code line={11} indent={1} code='"CSS": "~ 5 year"' type="python"/>
+        <Code line={12} indent={0} code="}" type="python"/>
+        <Code line={13} indent={0} code="" type="python"/>
     </Flex>
 )
 
