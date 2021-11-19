@@ -30,7 +30,7 @@ const AppScreen = (props: Props) => {
         <Box backgroundColor="#1E1E1E" borderRadius="10px" h="80vh" overflow="hidden">
             <Flex flexDir={"column"}>
                 <AppBar tabs={tabs} />
-                <AppBody currentTab={tabs.findIndex(tab => tab.toggled)} />
+                <AppBody tabIndex={tabs.findIndex(tab => tab.toggled)} />
             </Flex>
         </Box>
     )
