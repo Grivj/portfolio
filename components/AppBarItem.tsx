@@ -18,7 +18,7 @@ const AppBarItem = (props: AppBarItemProps) => {
                             <Image alt="" src={`files_logos/file_type_${props.file_type}.svg`} w="20px" h="20px" />
                         </Box>
                     }
-                    <Box as="span" fontFamily="Inter">
+                    <Box as="span" fontFamily="Inter" fontWeight="400">
                         {props.name}{props.extension}
                     </Box>
                 </Flex>
