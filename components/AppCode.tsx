@@ -1,9 +1,9 @@
-import { Box } from "@chakra-ui/react"
+import { Box, Flex } from "@chakra-ui/react"
 import Prism from "prismjs"
 import "prismjs/components/prism-json"
 import "prismjs/components/prism-markdown"
 import "prismjs/components/prism-python"
-import React, { useEffect } from "react"
+import React, { Children, useEffect } from "react"
 // import "prismjs/themes/prism-okaidia.css"
 
 // export interface CodeProps {
@@ -57,21 +57,62 @@ import React, { useEffect } from "react"
 // export default Code
 
 type CodeProps = {
-    code: string
-    language: string
+    children: React.ReactNode[]
 }
 
-export const Code = ({ code, language }: CodeProps) => {
+export const Code = ({ children }: CodeProps) => {
+    const arrayChildren = Children.toArray(children)
+
     useEffect(() => {
         Prism.highlightAll();
         console.log(Prism)
     }, []);
     return (
         <Box as="div" className="Code" background="none">
-            <Box as="pre">
-                <Box as="code" className={`language-${language}`}>{code}</Box>
-            </Box>
+            <Flex as="pre" direction="column">
+                {Children.map(arrayChildren, (child, index) => (
+                    <React.Fragment key={index}>
+                        <Flex>
+                            <CodeIndex index={index + 1} />
+                            {child}
+                        </Flex>
+                    </React.Fragment>
+                ))}
+                <CodeIndex index={arrayChildren.length + 1} />
+            </Flex>
         </Box>
     );
 }
 
+type CodeLineProps = {
+    code?: string
+    language: string,
+    indent?: number
+}
+
+export const CodeLine = ({ code, language, indent = 0 }: CodeLineProps) => (
+    <Flex>
+        <Box
+            as="code"
+            style={{ textIndent: indent * 45 }}
+            className={`language-${language}`}
+        >
+            {code}
+        </Box>
+    </Flex>
+)
+
+
+const CodeIndex = ({ index }: { index: number }) => (
+    <Box
+        as="span"
+        mr="40px"
+        w="20px"
+        display="inline-block"
+        textAlign="right"
+        color="#858585"
+        fontFamily="Cascadia Code"
+    >
+        {index}
+    </Box>
+)
