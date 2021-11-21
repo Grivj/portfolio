@@ -1,104 +1,12 @@
 import { Box } from "@chakra-ui/react";
-import { Code, CodeLine } from "./AppCode";
+import { TCSkills } from "./tabContent/content";
 
 
-const TabContentSkills = () => (
-    // <Flex flexDir="column">
-    //     <Code line={1} indent={0} code="deep_learning = {" type="python" />
-    //     <Code line={2} indent={1} code='"Python": "~ 2 years",' type="python" />
-    //     <Code line={3} indent={1} code='"Pytorch": "~ 2 years",' type="python" />
-    //     <Code line={4} indent={0} code="}" type="python" />
-    //     <Code line={5} indent={0} code="" type="python" />
-    //     <Code line={6} indent={0} code="web_development = {" type="python" />
-    //     <Code line={7} indent={1} code='"React": "< 1 years"' type="python" />
-    //     <Code line={8} indent={1} code='"Next.js": "< 1 years"' type="python" />
-    //     <Code line={9} indent={1} code='"PHP": "~ 5 years"' type="python" />
-    //     <Code line={10} indent={1} code='"HTML": "~ 5 years"' type="python" />
-    //     <Code line={11} indent={1} code='"CSS": "~ 5 years"' type="python" />
-    //     <Code line={12} indent={0} code="}" type="python" />
-    //     <Code line={13} indent={0} code="" type="python" />
-    // </Flex>
-    // <Code
-    //     language="python"
-    //     code={`
-    // deep_learning = {
-    //     "Python": "~ 2 years",
-    // }
-    // `}
-    // />
-    <Code>
-        <CodeLine code="from enum import Enum" language="python" />
-        <CodeLine language="python" />
-        <CodeLine language="python" />
 
-
-        <CodeLine code='deep_learning = {' language="python" />
-        <CodeLine code='"Python": "~ 2 years",' language="python" indent={1} />
-        <CodeLine code='"PyTorch": "~ 2 years",' language="python" indent={1} />
-        <CodeLine code='}' language="python" />
-        <CodeLine language="python" />
-
-        <CodeLine code='web_development = {' language="python" />
-        <CodeLine code='"React": "< 1 year"' language="python" indent={1} />
-        <CodeLine code='"Next.js": "< 1 year"' language="python" indent={1} />
-        <CodeLine code='"PHP": "< 1 year"' language="python" indent={1} />
-        <CodeLine code='"HTML": "< 1 year"' language="python" indent={1} />
-        <CodeLine code='"CSS": "< 1 year"' language="python" indent={1} />
-        <CodeLine code='}' language="python" />
-        <CodeLine language="python" />
-
-        <CodeLine code='softwares_libraries = [' language="python" />
-        <CodeLine code='"GitHub", "Figma"' language="python" indent={1} />
-        <CodeLine code='"FastAI", "LaTeX"' language="python" indent={1} />
-        <CodeLine code='"Pandas", "Seaborn"' language="python" indent={1} />
-        <CodeLine code='"NumPy", "Matplotlib"' language="python" indent={1} />
-        <CodeLine code='"Google Colaboratory "' language="python" indent={1} />
-        <CodeLine code='"Jupyter Notebook "' language="python" indent={1} />
-        <CodeLine code=']' language="python" />
-        <CodeLine language="python" />
-
-
-        <CodeLine code='languages = {' language="python" />
-        <CodeLine code='"French": PROFICIENCY.NATIVE' language="python" indent={1} />
-        <CodeLine code='"English": PROFICIENCY.PROFESSIONAL' language="python" indent={1} />
-        <CodeLine code='"Mandarin": PROFICIENCY.INTERMEDIATE' language="python" indent={1} />
-        <CodeLine code='}' language="python" />
-
-    </Code>
-
-)
-
-const TabContentInterests = () => (
-    // <Flex flexDir="column">
-    //     <Code line={1} indent={0} code="{" type="json" />
-    //     <Code line={2} indent={1} code='"include": [' type="json" />
-    //     <Code line={3} indent={2} code='"Something, Something",' type="json" />
-    //     <Code line={4} indent={2} code='"Something else",' type="json" />
-    //     <Code line={5} indent={1} code="]" type="json" />
-    //     <Code line={6} indent={0} code="}" type="json" />
-    // </Flex>
-    // <Code
-    //     language="json"
-    //     code={`
-    // {
-    //     "include": [
-    //         "something", "something",
-    //         "something else"
-    //     ]
-    // }
-    // `} />
-    <Code>
-        <CodeLine code='{' language="json" />
-        <CodeLine code='"include": [' language="json" indent={1} />
-        <CodeLine code='"something"' language="json" indent={2} />
-        <CodeLine code=']' language="json" indent={1} />
-        <CodeLine code='}' language="json" />
-    </Code>
-)
 
 // const TabContentEducation = () => (
 //     <Flex flexDir="column">
-//         <Code line={1} indent={0} code="# MS Computer Science erfierjoiergjioejioerjgoe" type="md" />
+//         <Code line={1} indent={0} code="# MS Computer Science" type="md" />
 //         <Code line={2} indent={0} code='## Hunan University - China, Changsha' type="md" />
 //         <Code line={3} indent={1} code='> Research on the detection of adversarial examples' type="md" />
 //         <Code line={4} indent={1} code='in deep learning, computer vision.' type="md" />
@@ -164,7 +72,7 @@ const AppBody = ({ tabIndex }: { tabIndex: number }) => {
     const contentSwitch = (contentId: number): JSX.Element => {
         switch (contentId) {
             case 0:
-                return <TabContentSkills />
+                return <TCSkills />
             case 1:
                 return <TabContentInterests />
             // case 2:
