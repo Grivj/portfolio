@@ -1,4 +1,4 @@
-import { Box, Collapse, Flex, useDisclosure } from "@chakra-ui/react"
+import { Box, Collapse, Flex, ScaleFade, useDisclosure } from "@chakra-ui/react"
 import { useRouter } from "next/dist/client/router"
 import Router from 'next/router'
 import { useEffect } from "react"
@@ -31,24 +31,32 @@ const AppScreen = () => {
 
 
     return (
-        <Box backgroundColor="#1E1E1E" borderRadius={["0", "10px"]} overflow="hidden" boxShadow="dark-lg">
-            <Flex flexDir={"column"} height="inherit">
-                <Flex alignItems="center">
-                    <Box
-                        minWidth="15px" minHeight="15px"
-                        margin="0 20px"
-                        borderRadius="50%"
-                        backgroundColor="#FFB83D"
-                        cursor="pointer"
-                        onClick={onToggle}
-                    />
-                    <AppBar tabs={tabs} />
+        <ScaleFade in={true}>
+            <Box
+                backgroundColor="#1E1E1E"
+                borderRadius={["0", "10px"]}
+                overflow="hidden"
+                boxShadow="dark-lg"
+                opacity="0.85"
+            >
+                <Flex flexDir={"column"} height="inherit">
+                    <Flex alignItems="center">
+                        <Box
+                            minWidth="15px" minHeight="15px"
+                            margin="0 20px"
+                            borderRadius="50%"
+                            backgroundColor="#FFB83D"
+                            cursor="pointer"
+                            onClick={onToggle}
+                        />
+                        <AppBar tabs={tabs} />
+                    </Flex>
+                    <Collapse in={isOpen}>
+                        <AppBody tabIndex={tabs.findIndex(tab => tab.toggled)} />
+                    </Collapse>
                 </Flex>
-                <Collapse in={isOpen}>
-                    <AppBody tabIndex={tabs.findIndex(tab => tab.toggled)} />
-                </Collapse>
-            </Flex>
-        </Box>
+            </Box>
+        </ScaleFade>
     )
 }
 

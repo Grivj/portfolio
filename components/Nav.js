@@ -1,4 +1,5 @@
 import { Box, Flex, Link, Stack, Text } from "@chakra-ui/react";
+import NextLink from 'next/link';
 import React from "react";
 import Logo from "./Logo";
 
@@ -10,10 +11,7 @@ const NavBar = (props) => {
 
     return (
         <NavBarContainer {...props}>
-            <Logo
-                w="100px"
-                color={["white", "white", "primary.500", "primary.500"]}
-            />
+            <Logo color="white" />
             <MenuToggle toggle={toggle} isOpen={isOpen} />
             <MenuLinks isOpen={isOpen} />
         </NavBarContainer>
@@ -52,11 +50,13 @@ const MenuToggle = ({ toggle, isOpen }) => {
 
 const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
     return (
-        <Link href={to}>
-            <Text display="block" {...rest}>
-                {children}
-            </Text>
-        </Link>
+        <NextLink href={to} passHref>
+            <Link href={to}>
+                <Text display="block" {...rest}>
+                    {children}
+                </Text>
+            </Link>
+        </NextLink>
     );
 };
 
@@ -74,7 +74,7 @@ const MenuLinks = ({ isOpen }) => {
                 pt={[4, 4, 0, 0]}
             >
                 <MenuItem to="/">Home</MenuItem>
-                <MenuItem to="/works">works</MenuItem>
+                <MenuItem to="/resume">Resume</MenuItem>
             </Stack>
         </Box>
     );
@@ -87,11 +87,9 @@ const NavBarContainer = ({ children, ...props }) => {
             align="center"
             justify="space-between"
             wrap="wrap"
-            w="100%"
-            mb={8}
-            p={8}
-            bg={["primary.500", "primary.500", "transparent", "transparent"]}
-            color={["white", "white", "primary.700", "primary.700"]}
+            color={"white"}
+            p="2ch"
+            mb="2ch"
             {...props}
         >
             {children}
