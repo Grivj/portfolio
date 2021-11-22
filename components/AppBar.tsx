@@ -8,7 +8,7 @@ interface Props {
 const AppBar = (props: Props) => {
 
     return (
-        <Flex>
+        <Flex direction={{ base: "column", md: "row" }}>
             {props.tabs.map((tabProps, index) => (
                 <AppBarItem key={index} {...tabProps} />
             ))}

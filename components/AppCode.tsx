@@ -18,7 +18,7 @@ export const Code = ({ children }: CodeProps) => {
         console.log(Prism)
     }, []);
     return (
-        <Box as="div" className="Code" background="none">
+        <Box as="div" className="Code" background="none" overflow="auto">
             <Flex as="pre" direction="column">
                 {Children.map(arrayChildren, (child, index) => (
                     <React.Fragment key={index}>
@@ -46,7 +46,7 @@ export const CodeLine = ({ code, language = "python", indent = 0, fontWeight = "
     return (
         <Box
             as="code"
-            style={{ textIndent: indent * 45 }}
+            style={{ textIndent: indent * 25 }}
             className={`language-${language}`}
             fontWeight={fontWeight}
             fontStyle={fontStyle}
@@ -63,12 +63,12 @@ const CodeIndex = ({ index }: { index: number }) => (
     <Box
         as="span"
         mr="40px"
-        w="20px"
+        // w="20px"
         display="inline-block"
         textAlign="right"
         color="#858585"
         fontFamily="Cascadia Code"
     >
-        {index}
+        {index < 10 ? `0${index}` : index}
     </Box>
 )
