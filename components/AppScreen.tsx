@@ -27,7 +27,7 @@ const AppScreen = (props: Props) => {
 
 
     return (
-        <Box backgroundColor="#1E1E1E" borderRadius="10px" h="80vh" w={{ base: "auto", lg: "60vw" }} overflow="hidden" boxShadow="dark-lg">
+        <Box backgroundColor="#1E1E1E" borderRadius="10px" overflow="hidden" boxShadow="dark-lg">
             <Flex flexDir={"column"} height="inherit" cursor="text">
                 <AppBar tabs={tabs} />
                 <AppBody tabIndex={tabs.findIndex(tab => tab.toggled)} />

@@ -6,7 +6,7 @@ const Layout = ({ children, router }) => {
         <>
             <Meta />
 
-            <Container as="main" p="8" maxWidth="100vw" minHeight="100vh">
+            <Container as="main" p="8" minHeight="100vh" maxWidth="100vh">
                 {children}
             </Container>
         </>
