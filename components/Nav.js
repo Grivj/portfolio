@@ -3,20 +3,20 @@ import NextLink from 'next/link';
 import React from "react";
 import Logo from "./Logo";
 
-
-const NavBar = (props) => {
+const NavBar = ({ router }) => {
     const [isOpen, setIsOpen] = React.useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
 
     return (
-        <NavBarContainer {...props}>
+        <NavBarContainer>
             <Logo color="white" />
             <MenuToggle toggle={toggle} isOpen={isOpen} />
-            <MenuLinks isOpen={isOpen} />
+            <MenuLinks isOpen={isOpen} router={router} />
         </NavBarContainer>
     );
 };
+export default NavBar;
 
 const CloseIcon = () => (
     <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
@@ -48,11 +48,17 @@ const MenuToggle = ({ toggle, isOpen }) => {
     );
 };
 
-const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
+const MenuItem = ({ children, href = "/", router }) => {
+    const active = href === router.route
     return (
-        <NextLink href={to} passHref>
-            <Link href={to}>
-                <Text display="block" {...rest}>
+        <NextLink href={href} passHref>
+            <Link
+                backgroundColor={active ? 'rgb(30 30 30 / 85%)' : undefined}
+                p="1ch"
+                borderRadius="10px"
+                _focus={{ boxShadow: "none" }}
+                >
+                <Text display="block">
                     {children}
                 </Text>
             </Link>
@@ -60,7 +66,7 @@ const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
     );
 };
 
-const MenuLinks = ({ isOpen }) => {
+const MenuLinks = ({ isOpen, router }) => {
     return (
         <Box
             display={{ base: isOpen ? "block" : "none", md: "block" }}
@@ -73,14 +79,14 @@ const MenuLinks = ({ isOpen }) => {
                 direction={["column", "row", "row", "row"]}
                 pt={[4, 4, 0, 0]}
             >
-                <MenuItem to="/">Home</MenuItem>
-                <MenuItem to="/resume">Resume</MenuItem>
+                <MenuItem href="/" router={router}>Home</MenuItem>
+                <MenuItem href="/resume" router={router}>Resume</MenuItem>
             </Stack>
         </Box>
     );
 };
 
-const NavBarContainer = ({ children, ...props }) => {
+const NavBarContainer = ({ children }) => {
     return (
         <Flex
             as="nav"
@@ -90,11 +96,9 @@ const NavBarContainer = ({ children, ...props }) => {
             color={"white"}
             p="2ch"
             mb="2ch"
-            {...props}
         >
             {children}
         </Flex>
     );
 };
 
-export default NavBar;
