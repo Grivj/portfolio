@@ -15,7 +15,6 @@ export const Code = ({ children }: CodeProps) => {
 
     useEffect(() => {
         Prism.highlightAll();
-        console.log(Prism)
     }, []);
     return (
         <Box
@@ -53,10 +52,10 @@ type CodeLineProps = {
     indent?: number,
     fontWeight?: string,
     fontStyle?: string,
-    style?:object,
+    style?: object,
 }
 
-export const CodeLine = ({ code, language = "python", indent = 0, fontWeight = "normal", fontStyle = "normal", style={} }: CodeLineProps) => {
+export const CodeLine = ({ code, language = "python", indent = 0, fontWeight = "normal", fontStyle = "normal", style = {} }: CodeLineProps) => {
     const [isFocused, setIsFocused] = useState<boolean>(false)
     return (
         <Box

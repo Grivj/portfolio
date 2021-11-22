@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react"
+import { Box, Collapse, Flex, useDisclosure } from "@chakra-ui/react"
 import { useRouter } from "next/dist/client/router"
 import AppBar from "./AppBar"
 import { AppBarItemProps } from "./AppBarItem"
@@ -11,7 +11,7 @@ interface Props {
 
 
 const AppScreen = (props: Props) => {
-
+    const { isOpen, onToggle } = useDisclosure({'defaultIsOpen':true})
     const { query } = useRouter();
 
     const isCurrentTab = (name: string): boolean => {
@@ -28,9 +28,21 @@ const AppScreen = (props: Props) => {
 
     return (
         <Box backgroundColor="#1E1E1E" borderRadius="10px" overflow="hidden" boxShadow="dark-lg">
-            <Flex flexDir={"column"} height="inherit" cursor="text">
-                <AppBar tabs={tabs} />
-                <AppBody tabIndex={tabs.findIndex(tab => tab.toggled)} />
+            <Flex flexDir={"column"} height="inherit">
+                <Flex alignItems="center">
+                    <Box
+                        w="15px" h="15px"
+                        margin="0 20px"
+                        borderRadius="50%"
+                        backgroundColor="#FFB83D"
+                        cursor="pointer"
+                        onClick={onToggle}
+                    />
+                    <AppBar tabs={tabs} />
+                </Flex>
+                <Collapse in={isOpen}>
+                    <AppBody tabIndex={tabs.findIndex(tab => tab.toggled)} />
+                </Collapse>
             </Flex>
         </Box>
     )
