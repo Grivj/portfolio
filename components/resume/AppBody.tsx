@@ -33,7 +33,6 @@ const AppBody = ({ tabIndex }: { tabIndex: number }) => {
                     />
                 </Box>
             }
-            { }
         </Box>
     )
 }

@@ -1,4 +1,4 @@
-import AppScreen from '../components/AppScreen'
+import AppScreen from '../components/resume/AppScreen'
 
 const Resume = () => (
     <AppScreen />
