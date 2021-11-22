@@ -31,7 +31,7 @@ const AppScreen = () => {
 
 
     return (
-        <Box backgroundColor="#1E1E1E" borderRadius="10px" overflow="hidden" boxShadow="dark-lg">
+        <Box backgroundColor="#1E1E1E" borderRadius={["0", "10px"]} overflow="hidden" boxShadow="dark-lg">
             <Flex flexDir={"column"} height="inherit">
                 <Flex alignItems="center">
                     <Box
