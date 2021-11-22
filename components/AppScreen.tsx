@@ -31,7 +31,7 @@ const AppScreen = (props: Props) => {
             <Flex flexDir={"column"} height="inherit">
                 <Flex alignItems="center">
                     <Box
-                        w="15px" h="15px"
+                        minWidth="15px" minHeight="15px"
                         margin="0 20px"
                         borderRadius="50%"
                         backgroundColor="#FFB83D"

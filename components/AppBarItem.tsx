@@ -16,6 +16,7 @@ const AppBarItem = (props: AppBarItemProps) => {
                 borderRadius="0"
                 background={props.toggled ? "#1E1E1E" : "#2D2D2D"}
                 _focus={{ boxShadow: "none" }}
+                _hover={{ backgroundColor: "none" }}
             >
                 <Flex h="inherit" alignContent="center" alignItems="center" flexWrap="wrap" padding="12px 16px">
                     {props.file_type &&

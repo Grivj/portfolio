@@ -21,7 +21,7 @@ const AppBody = ({ tabIndex }: { tabIndex: number }) => {
     }
 
     return (
-        <Box p="5" cursor="text">
+        <Box padding="1ch" cursor="text">
             {contentSwitch(tabIndex)}
         </Box>
     )
