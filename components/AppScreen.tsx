@@ -25,7 +25,7 @@ const AppScreen = () => {
 
     useEffect(() => {
         if (router.isReady && Object.keys(router.query).length === 0) {
-            Router.push('/?tab=skills')
+            Router.push('?tab=skills')
         }
     }, [router])
 

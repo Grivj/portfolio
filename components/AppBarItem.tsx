@@ -10,7 +10,7 @@ export interface AppBarItemProps {
 
 const AppBarItem = (props: AppBarItemProps) => {
     return (
-        <Link href={`/?tab=${props.name}`} passHref>
+        <Link href={`?tab=${props.name}`} passHref>
             <Button
                 padding="0"
                 borderRadius="0"
