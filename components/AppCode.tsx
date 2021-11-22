@@ -3,7 +3,7 @@ import Prism from "prismjs"
 import "prismjs/components/prism-json"
 import "prismjs/components/prism-markdown"
 import "prismjs/components/prism-python"
-import React, { Children, useEffect, useState } from "react"
+import React, { Children, useEffect } from "react"
 
 
 type CodeProps = {
@@ -25,7 +25,7 @@ export const Code = ({ children }: CodeProps) => {
             sx={{
                 '&::-webkit-scrollbar': {
                     borderRadius: '10px',
-                    backgroundColor: `#2D2D2D       `,
+                    backgroundColor: `#2D2D2D`,
                 },
                 '&::-webkit-scrollbar-thumb': {
                     backgroundColor: `#424242`,
@@ -56,7 +56,6 @@ type CodeLineProps = {
 }
 
 export const CodeLine = ({ code, language = "python", indent = 0, fontWeight = "normal", fontStyle = "normal", style = {} }: CodeLineProps) => {
-    const [isFocused, setIsFocused] = useState<boolean>(false)
     return (
         <Box
             as="code"
