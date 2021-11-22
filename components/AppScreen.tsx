@@ -1,21 +1,19 @@
 import { Box, Collapse, Flex, useDisclosure } from "@chakra-ui/react"
 import { useRouter } from "next/dist/client/router"
+import Router from 'next/router'
+import { useEffect } from "react"
 import AppBar from "./AppBar"
 import { AppBarItemProps } from "./AppBarItem"
 import AppBody from "./AppBody"
 
 
-interface Props {
+const AppScreen = () => {
+    const { isOpen, onToggle } = useDisclosure({ 'defaultIsOpen': true })
+    const router = useRouter();
 
-}
-
-
-const AppScreen = (props: Props) => {
-    const { isOpen, onToggle } = useDisclosure({'defaultIsOpen':true})
-    const { query } = useRouter();
 
     const isCurrentTab = (name: string): boolean => {
-        return query.tab == name
+        return router.query.tab == name
     }
 
     const tabs: AppBarItemProps[] = [
@@ -24,6 +22,12 @@ const AppScreen = (props: Props) => {
         { name: "education", extension: ".md", file_type: "markdown", toggled: isCurrentTab("education") },
         { name: "experience", extension: ".md", file_type: "markdown", toggled: isCurrentTab("experience") },
     ]
+
+    useEffect(() => {
+        if (router.isReady && Object.keys(router.query).length === 0) {
+            Router.push('/?tab=skills')
+        }
+    }, [router])
 
 
     return (

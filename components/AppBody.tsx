@@ -1,4 +1,4 @@
-import { Box, Container } from "@chakra-ui/react";
+import { Box, Spinner } from "@chakra-ui/react";
 import { TCEducation, TCExperience, TCInterests, TCSkills } from "./tabContent/content";
 
 
@@ -22,7 +22,18 @@ const AppBody = ({ tabIndex }: { tabIndex: number }) => {
 
     return (
         <Box padding="1ch" cursor="text">
-            {contentSwitch(tabIndex)}
+            {tabIndex > -1
+                ? contentSwitch(tabIndex)
+                : <Box textAlign="center" p={"10ch"}>
+                    <Spinner
+                        thickness="4px"
+                        speed="0.65s"
+                        color="blue.500"
+                        size="xl"
+                    />
+                </Box>
+            }
+            { }
         </Box>
     )
 }
