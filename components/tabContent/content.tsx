@@ -2,22 +2,22 @@ import { Code, CodeLine } from "../AppCode"
 
 export const TCSkills = () => (
     <Code>
-        <CodeLine code="from enum import Enum" language="python" />
+        <CodeLine code="from enums import PROFICIENCY, EXPERIENCE" language="python" />
         <CodeLine />
         <CodeLine />
 
         <CodeLine code='deep_learning = {' language="python" />
-        <CodeLine code='"Python": "~ 2 years",' language="python" indent={1} />
-        <CodeLine code='"PyTorch": "~ 2 years",' language="python" indent={1} />
+        <CodeLine code='"Python": EXPERIENCE.TwoYears,' language="python" indent={1} />
+        <CodeLine code='"PyTorch": EXPERIENCE.TwoYears,' language="python" indent={1} />
         <CodeLine code='}' language="python" />
         <CodeLine />
 
         <CodeLine code='web_development = {' language="python" />
-        <CodeLine code='"React": "< 1 year"' language="python" indent={1} />
-        <CodeLine code='"Next.js": "< 1 year"' language="python" indent={1} />
-        <CodeLine code='"PHP": "< 1 year"' language="python" indent={1} />
-        <CodeLine code='"HTML": "< 1 year"' language="python" indent={1} />
-        <CodeLine code='"CSS": "< 1 year"' language="python" indent={1} />
+        <CodeLine code='"React": EXPERIENCE.OneYear' language="python" indent={1} />
+        <CodeLine code='"Next.js": EXPERIENCE.OneYear' language="python" indent={1} />
+        <CodeLine code='"PHP": EXPERIENCE.FiveYears' language="python" indent={1} />
+        <CodeLine code='"HTML": EXPERIENCE.FiveYears' language="python" indent={1} />
+        <CodeLine code='"CSS": EXPERIENCE.FiveYears' language="python" indent={1} />
         <CodeLine code='}' language="python" />
         <CodeLine />
 
@@ -62,18 +62,18 @@ export const TCEducation = () => (
         <CodeLine code='# MS Computer Science' language="markdown" />
         <CodeLine code='## Hunan University - China, Changsha' language="markdown" />
         <CodeLine code='> Research on the detection of adversarial examples,' language="markdown" indent={1} />
-        <CodeLine code='* Note: Studying under the CSC Scholarship' language="markdown" indent={1} fontStyle="italic" />
+        <CodeLine code='* Note: Studying under the CSC Scholarship' language="markdown" indent={1} fontStyle="italic" style={{ color: "#C591E8" }} />
         <CodeLine />
 
         <CodeLine code='# Mandarin language courses' language="markdown" />
         <CodeLine code='## Hunan University - China, Changsha' language="markdown" />
         <CodeLine code='> Studying Mandarin while exploring Hunan, China.' language="markdown" indent={1} />
-        <CodeLine code='* Note: Obtained the HSK3 certification' language="markdown" indent={1} fontStyle="italic" />
+        <CodeLine code='* Note: Obtained the HSK3 certification' language="markdown" indent={1} fontStyle="italic" style={{ color: "#C591E8" }} />
         <CodeLine />
 
         <CodeLine code='# Bachelor digital project manager' language="markdown" />
         <CodeLine code='## IESA - France, Paris' language="markdown" />
-        <CodeLine code='* Note: Certified title level II (FR) 6 (EU) (NSF320p-326p)' language="markdown" indent={1} fontStyle="italic" />
+        <CodeLine code='* Note: Certified title level II (FR) 6 (EU) (NSF320p-326p)' language="markdown" indent={1} fontStyle="italic" style={{ color: "#C591E8" }} />
         <CodeLine />
     </Code>
 )
@@ -83,17 +83,18 @@ export const TCExperience = () => (
         <CodeLine code='# Fullstack web developer' language="markdown" />
         <CodeLine code='## Freelance - China, Tianjin' language="markdown" />
         <CodeLine code='> Various projects from conception to development.' language="markdown" indent={1} />
-        <CodeLine code='* stack: PHP, HTML, CSS, JS, MySQL, SQL' language="markdown" indent={1} fontStyle="italic" />
+        <CodeLine code='* stack: PHP, HTML, CSS, JS, MySQL, SQL' language="markdown" indent={1} fontStyle="italic" style={{ color: "#C591E8" }} />
         <CodeLine />
 
         <CodeLine code='# Back-end developer' language="markdown" />
         <CodeLine code='## ViaAduc - France, Paris / La Defense' language="markdown" />
         <CodeLine code='> Conception and development of PHP web applications,' language="markdown" indent={1} />
+        <CodeLine code='mostly in the e-learning domain.' language="markdown" indent={1} />
         <CodeLine code='Development from scratch of:' language="markdown" indent={1} />
         <CodeLine code='• MOOC (Massive Open Online Course)' language="markdown" indent={2} />
         <CodeLine code='• LMS (Learning Management System)' language="markdown" indent={2} />
         <CodeLine code='• Applications to generate surveys and/or quizzes' language="markdown" indent={2} />
-        <CodeLine code='* stack: PHP, Symfony3, HTML/CSS, SQLServer' language="markdown" indent={1} fontStyle="italic" />
+        <CodeLine code='* stack: PHP, Symfony3, HTML/CSS, SQLServer' language="markdown" indent={1} fontStyle="italic" style={{ color: "#C591E8" }} />
         <CodeLine />
 
         <CodeLine code='# Front-end developer' language="markdown" />
@@ -101,7 +102,7 @@ export const TCExperience = () => (
         <CodeLine code='Internship in a real-estate startup.' language="markdown" indent={1} />
         <CodeLine code='> Front development on the main web-app' language="markdown" indent={1} />
         <CodeLine code='> Creation and maintenance of a blog for SEO boost' language="markdown" indent={1} />
-        <CodeLine code='* stack: HTML/CSS/JS, Wordpress, Photoshop, SEO' language="markdown" indent={1} fontStyle="italic" />
+        <CodeLine code='* stack: HTML/CSS/JS, Wordpress, Photoshop, SEO' language="markdown" indent={1} fontStyle="italic" style={{ color: "#C591E8" }} />
         <CodeLine />
 
         <CodeLine code='# Front-end developer' language="markdown" />
@@ -109,7 +110,7 @@ export const TCExperience = () => (
         <CodeLine code='First developer experience.' language="markdown" indent={1} />
         <CodeLine code='Creation of custom Wordpress websites:' language="markdown" indent={1} />
         <CodeLine code='> For: University, Restaurant, Photographers.' language="markdown" indent={2} />
-        <CodeLine code='* stack: HTML/CSS/JS, Wordpress, Photoshop' language="markdown" indent={1} fontStyle="italic" />
+        <CodeLine code='* stack: HTML/CSS/JS, Wordpress, Photoshop' language="markdown" indent={1} fontStyle="italic" style={{ color: "#C591E8" }} />
         <CodeLine />
     </Code>
 )

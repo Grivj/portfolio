@@ -18,7 +18,21 @@ export const Code = ({ children }: CodeProps) => {
         console.log(Prism)
     }, []);
     return (
-        <Box as="div" className="Code" background="none" overflow="auto">
+        <Box
+            as="div"
+            className="Code"
+            background="none"
+            overflow="auto"
+            sx={{
+                '&::-webkit-scrollbar': {
+                    borderRadius: '10px',
+                    backgroundColor: `#2D2D2D       `,
+                },
+                '&::-webkit-scrollbar-thumb': {
+                    backgroundColor: `#424242`,
+                },
+            }}
+        >
             <Flex as="pre" direction="column">
                 {Children.map(arrayChildren, (child, index) => (
                     <React.Fragment key={index}>
@@ -38,15 +52,16 @@ type CodeLineProps = {
     language?: string,
     indent?: number,
     fontWeight?: string,
-    fontStyle?: string
+    fontStyle?: string,
+    style?:object,
 }
 
-export const CodeLine = ({ code, language = "python", indent = 0, fontWeight = "normal", fontStyle = "normal" }: CodeLineProps) => {
+export const CodeLine = ({ code, language = "python", indent = 0, fontWeight = "normal", fontStyle = "normal", style={} }: CodeLineProps) => {
     const [isFocused, setIsFocused] = useState<boolean>(false)
     return (
         <Box
             as="code"
-            style={{ textIndent: indent * 25 }}
+            style={{ textIndent: indent * 25, ...style }}
             className={`language-${language}`}
             fontWeight={fontWeight}
             fontStyle={fontStyle}
