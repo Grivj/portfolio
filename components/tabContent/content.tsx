@@ -26,8 +26,8 @@ export const TCSkills = () => (
         <CodeLine code='"FastAI", "LaTeX"' language="python" indent={1} />
         <CodeLine code='"Pandas", "Seaborn"' language="python" indent={1} />
         <CodeLine code='"NumPy", "Matplotlib"' language="python" indent={1} />
-        <CodeLine code='"Google Colaboratory "' language="python" indent={1} />
-        <CodeLine code='"Jupyter Notebook "' language="python" indent={1} />
+        <CodeLine code='"Google Colaboratory"' language="python" indent={1} />
+        <CodeLine code='"Jupyter Notebook"' language="python" indent={1} />
         <CodeLine code=']' language="python" />
         <CodeLine />
 
