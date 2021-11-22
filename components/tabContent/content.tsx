@@ -6,13 +6,13 @@ export const TCSkills = () => (
         <CodeLine />
         <CodeLine />
 
-        <CodeLine code='deep_learning = {' language="python" />
+        <CodeLine code='deep_learning: dict[str, EXPERIENCE] = {' language="python" />
         <CodeLine code='"Python": EXPERIENCE.TwoYears,' language="python" indent={1} />
         <CodeLine code='"PyTorch": EXPERIENCE.TwoYears,' language="python" indent={1} />
         <CodeLine code='}' language="python" />
         <CodeLine />
 
-        <CodeLine code='web_development = {' language="python" />
+        <CodeLine code='web_development: dict[str, EXPERIENCE] = {' language="python" />
         <CodeLine code='"React": EXPERIENCE.OneYear' language="python" indent={1} />
         <CodeLine code='"Next.js": EXPERIENCE.OneYear' language="python" indent={1} />
         <CodeLine code='"PHP": EXPERIENCE.FiveYears' language="python" indent={1} />
