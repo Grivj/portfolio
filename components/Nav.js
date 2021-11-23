@@ -4,7 +4,6 @@ import React from "react";
 import Logo from "./Logo";
 
 const NavBar = ({ router }) => {
-    // const [isOpen, setIsOpen] = React.useState(false);
     const { isOpen, onToggle } = useDisclosure({ 'defaultIsOpen': true })
 
     const toggle = () => setIsOpen(!isOpen);
@@ -28,9 +27,6 @@ const NavBar = ({ router }) => {
 
             </Collapse>
         </Container>
-
-
-
     );
 };
 export default NavBar;
@@ -93,7 +89,7 @@ const MenuLinks = ({ router }) => {
             pt={[4, 4, 0, 0]}
         >
             <MenuItem href="/" router={router}>Home</MenuItem>
-            <MenuItem href="/resume" router={router}>Resume</MenuItem>
+            <MenuItem href="/resume" router={router}>Résumé</MenuItem>
         </Stack>
     );
 };

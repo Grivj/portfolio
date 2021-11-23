@@ -22,7 +22,7 @@ const Home = () => (
           maxWidth="100px"
           display="inline-block"
           borderRadius="full"
-          src="/images/takuya.jpg"
+          src="/"
           alt="Profile image"
         />
       </Box>
