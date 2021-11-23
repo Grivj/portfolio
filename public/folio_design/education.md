@@ -1,10 +1,3 @@
-import App from '../components/App/App'
-import Code from '../components/App/Code'
-
-
-const Education = () => (
-    <App>
-        <Code code={`
 ## MS Computer Science
 ### Hunan University - China, Changsha
 > Research on the detection of adversarial examples
@@ -18,10 +11,3 @@ const Education = () => (
 ## Bachelor digital project manager
 ### IESA - France, Paris
 *Note: Certified title level II (FR) 6 (EU) (NSF320p-326p)*
-        `.trim()}
-            language="markdown"
-        />
-    </App>
-)
-
-export default Education

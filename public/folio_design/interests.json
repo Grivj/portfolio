@@ -1,0 +1,10 @@
+{
+    "includes": [
+        "Chess", "Chess tactics",
+        "Mandarin",
+        "Aesthetic of code",
+        "Uncle Bob",
+        "Backpacking",
+        "Visiting minorities in deep rural China"
+    ]
+}

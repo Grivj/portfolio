@@ -50,7 +50,7 @@ interface TABSProps {
 
 const TABS: TABSProps[] = [
     { name: "skills", extension: ".py", file_type: "python", href: "/skills" },
-    { name: "interests", extension: ".json", file_type: "tsconfig", href: "/interests" },
+    { name: "interests", extension: ".json", file_type: "json", href: "/interests" },
     { name: "education", extension: ".md", file_type: "markdown", href: "/education" },
     { name: "experience", extension: ".md", file_type: "markdown", href: "/experience" },
     { name: "works", extension: "", file_type: "file", href: "/works" },

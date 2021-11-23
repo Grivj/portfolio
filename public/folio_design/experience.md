@@ -1,10 +1,3 @@
-import App from '../components/App/App'
-import Code from '../components/App/Code'
-
-
-const Experience = () => (
-    <App>
-        <Code code={`
 ## Fullstack web developer
 ### Freelance - China, Tianjin
 > Various projects from conception to development.' language="markdown" indent={1} />
@@ -33,10 +26,3 @@ First developer experience.
 Creation of custom Wordpress websites:
 > For: University, Restaurant, Photographers
 *stack: HTML/CSS/JS, Wordpress, Photoshop*
-        `.trim()}
-            language="markdown"
-        />
-    </App>
-)
-
-export default Experience
