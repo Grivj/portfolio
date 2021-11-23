@@ -1,89 +1,61 @@
-import { Box, Flex } from "@chakra-ui/react"
-import Prism from "prismjs"
-import "prismjs/components/prism-json"
-import "prismjs/components/prism-markdown"
-import "prismjs/components/prism-python"
-import React, { Children, useEffect } from "react"
+import { Box } from "@chakra-ui/react";
+import Highlight, { defaultProps, Language } from "prism-react-renderer";
+import React from "react";
+import styled from "styled-components";
 
+const Line = styled.div`
+  display: table-row;
+`;
 
-type CodeProps = {
-    children: React.ReactNode[]
+const LineNo = styled.span`
+  display: table-cell;
+  text-align: right;
+  padding-right: 1em;
+  user-select: none;
+  opacity: 0.5;
+`;
+
+const LineContent = styled.span`
+  display: table-cell;
+`;
+
+interface CodeProps {
+    code: string
+    language: Language
 }
 
-export const Code = ({ children }: CodeProps) => {
-    const arrayChildren = Children.toArray(children)
-
-    useEffect(() => {
-        Prism.highlightAll();
-    }, []);
-    return (
-        <Box
-            as="div"
-            className="Code"
-            background="none"
-            overflow="auto"
-            sx={{
-                '&::-webkit-scrollbar': {
-                    borderRadius: '10px',
-                    height: '10px',
-                    backgroundColor: `#2D2D2D`,
-                },
-                '&::-webkit-scrollbar-thumb': {
-                    backgroundColor: `#424242`,
-                    borderRadius: '10px',
-                },
-            }}
-        >
-            <Flex as="pre" direction="column">
-                {Children.map(arrayChildren, (child, index) => (
-                    <React.Fragment key={index}>
-                        <Flex w="full">
-                            <CodeIndex index={index + 1} />
-                            {child}
-                        </Flex>
-                    </React.Fragment>
+const Code = (props: CodeProps) => (
+    <Highlight {...defaultProps} code={props.code} language={props.language}>
+        {({ className, tokens, getLineProps, getTokenProps }) => (
+            <Box
+                as="pre"
+                className={className}
+                overflow="auto"
+                sx={{
+                    '&::-webkit-scrollbar': {
+                        borderRadius: '10px',
+                        height: '10px',
+                        backgroundColor: `#2D2D2D`,
+                    },
+                    '&::-webkit-scrollbar-thumb': {
+                        backgroundColor: `#424242`,
+                        borderRadius: '10px',
+                    },
+                }}
+            >
+                {tokens.map((line, i) => (
+                    <Line key={i} {...getLineProps({ line, key: i })}>
+                        <LineNo>{i + 1}</LineNo>
+                        <LineContent>
+                            {line.map((token, key) => (
+                                <span key={key} {...getTokenProps({ token, key })} />
+                            ))}
+                        </LineContent>
+                    </Line>
                 ))}
-            </Flex>
-        </Box>
-    );
-}
+            </Box>
+        )}
+    </Highlight>
+);
 
-type CodeLineProps = {
-    code?: string
-    language?: string,
-    indent?: number,
-    fontWeight?: string,
-    fontStyle?: string,
-    style?: object,
-}
-
-export const CodeLine = ({ code, language = "python", indent = 0, fontWeight = "normal", fontStyle = "normal", style = {} }: CodeLineProps) => {
-    return (
-        <Box
-            as="code"
-            style={{ textIndent: indent * 25, ...style }}
-            className={`language-${language}`}
-            fontWeight={fontWeight}
-            fontStyle={fontStyle}
-            w="inherit"
-            _hover={{ backgroundColor: "#1C2E3E" }}
-        >
-            {code}
-        </Box>
-    )
-}
-
-
-const CodeIndex = ({ index }: { index: number }) => (
-    <Box
-        as="span"
-        mr="40px"
-        // w="20px"
-        display="inline-block"
-        textAlign="right"
-        color="#858585"
-        fontFamily="Cascadia Code"
-    >
-        {index < 10 ? `0${index}` : index}
-    </Box>
-)
+export default Code

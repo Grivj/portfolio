@@ -1,9 +1,29 @@
-from enum import Enum
-
-class EXPERIENCE(Enum):
-    OneYear:0
+from enums import EXPERIENCE, PROFICIENCY
 
 deep_learning: dict[str, EXPERIENCE] = {
-    "Python": EXPERIENCE.OneYear,
-} 
+    "Python": EXPERIENCE.TwoYears,
+    "PyTorch": EXPERIENCE.TwoYears
+}
 
+web_development: dict[str, EXPERIENCE] = {
+    "React": EXPERIENCE.OneYear,
+    "Next.js": EXPERIENCE.OneYear,
+    "PHP": EXPERIENCE.FiveYears,
+    "HTML": EXPERIENCE.FiveYears,
+    "CSS": EXPERIENCE.FiveYears
+}
+
+softwares_libraries = [
+    "GitHub", "Figma",
+    "FastAI", "LaTeX",
+    "Pandas", "Seaborn",
+    "NumPy", "Matplotlib",
+    "Google Colaboratory",
+    "Jupyter Notebook"
+]
+
+languages = {
+    "French": PROFICIENCY.NATIVE,
+    "English": PROFICIENCY.PROFESSIONAL,
+    "Mandarin": PROFICIENCY.INTERMEDIATE
+}

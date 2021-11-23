@@ -1,10 +1,47 @@
 import App from '../components/App/App'
-import { Code, CodeLine } from '../components/App/Code'
+import Code from '../components/App/Code'
 
 const Skills = () => (
     <App>
-        <Code>
-            <CodeLine code="from enums import PROFICIENCY, EXPERIENCE" language="python" />
+        <Code code={
+            `
+from enums import EXPERIENCE, PROFICIENCY
+
+deep_learning: dict[str, EXPERIENCE] = {
+    "Python": EXPERIENCE.TwoYears,
+    "PyTorch": EXPERIENCE.TwoYears
+}
+
+web_development: dict[str, EXPERIENCE] = {
+    "React": EXPERIENCE.OneYear,
+    "Next.js": EXPERIENCE.OneYear,
+    "PHP": EXPERIENCE.FiveYears,
+    "HTML": EXPERIENCE.FiveYears,
+    "CSS": EXPERIENCE.FiveYears
+}
+
+softwares_libraries = [
+    "GitHub", "Figma",
+    "FastAI", "LaTeX",
+    "Pandas", "Seaborn",
+    "NumPy", "Matplotlib",
+    "Google Colaboratory",
+    "Jupyter Notebook"
+]
+
+languages = {
+    "French": PROFICIENCY.NATIVE,
+    "English": PROFICIENCY.PROFESSIONAL,
+    "Mandarin": PROFICIENCY.INTERMEDIATE
+}
+
+`.trim()
+
+
+        }
+            language="python"
+        />
+        {/* <CodeLine code="from enums import PROFICIENCY, EXPERIENCE" language="python" />
             <CodeLine />
             <CodeLine />
 
@@ -38,8 +75,8 @@ const Skills = () => (
             <CodeLine code='"English": PROFICIENCY.PROFESSIONAL' language="python" indent={1} />
             <CodeLine code='"Mandarin": PROFICIENCY.INTERMEDIATE' language="python" indent={1} />
             <CodeLine code='}' language="python" />
-            <CodeLine />
-        </Code>
+            <CodeLine /> */}
+        {/* </Code> */}
     </App>
 )
 
