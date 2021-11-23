@@ -1,4 +1,5 @@
 import { Code, CodeLine } from "../AppCode"
+import { WorksContainer } from "../AppWorks"
 
 export const TCSkills = () => (
     <Code>
@@ -113,4 +114,9 @@ export const TCExperience = () => (
         <CodeLine code='* stack: HTML/CSS/JS, Wordpress, Photoshop' language="markdown" indent={1} fontStyle="italic" style={{ color: "#C591E8" }} />
         <CodeLine />
     </Code>
+)
+
+export const TCWorks = () => (
+    <WorksContainer></WorksContainer>
+
 )

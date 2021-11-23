@@ -8,7 +8,7 @@ const Layout = ({ children, router }) => {
         <>
             <Meta />
             <Container as="main" p={0} minHeight="100vh" maxWidth="full">
-                <NavBar router={router} />
+                {/* <NavBar router={router} /> */}
                 {children}
                 <Footer />
             </Container>

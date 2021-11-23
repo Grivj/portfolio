@@ -21,6 +21,7 @@ const AppScreen = () => {
         { name: "interests", extension: ".json", file_type: "tsconfig", toggled: isCurrentTab("interests") },
         { name: "education", extension: ".md", file_type: "markdown", toggled: isCurrentTab("education") },
         { name: "experience", extension: ".md", file_type: "markdown", toggled: isCurrentTab("experience") },
+        { name: "works", extension: "", file_type: "file", toggled: isCurrentTab("works") },
     ]
 
     useEffect(() => {

@@ -1,5 +1,5 @@
 import { Box, Spinner } from "@chakra-ui/react";
-import { TCEducation, TCExperience, TCInterests, TCSkills } from "./tabContent/content";
+import { TCEducation, TCExperience, TCInterests, TCSkills, TCWorks } from "./tabContent/content";
 
 
 const AppBody = ({ tabIndex }: { tabIndex: number }) => {
@@ -14,6 +14,8 @@ const AppBody = ({ tabIndex }: { tabIndex: number }) => {
                 return <TCEducation />
             case 3:
                 return <TCExperience />
+            case 4:
+                return <TCWorks />
 
             default:
                 return <>Content not found</>;

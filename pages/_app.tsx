@@ -9,7 +9,7 @@ import '../styles/AppCode.css'
 function App({ Component, pageProps, router }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Layout router={router}>
+      <Layout>
         <Component {...pageProps} key={router.route} />
       </Layout>
     </ChakraProvider>
