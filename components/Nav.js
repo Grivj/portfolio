@@ -1,19 +1,36 @@
-import { Box, Flex, Link, Stack, Text } from "@chakra-ui/react";
+import { Box, Collapse, Container, Flex, Link, Stack, Text, useDisclosure } from "@chakra-ui/react";
 import NextLink from 'next/link';
 import React from "react";
 import Logo from "./Logo";
 
 const NavBar = ({ router }) => {
-    const [isOpen, setIsOpen] = React.useState(false);
+    // const [isOpen, setIsOpen] = React.useState(false);
+    const { isOpen, onToggle } = useDisclosure({ 'defaultIsOpen': true })
 
     const toggle = () => setIsOpen(!isOpen);
 
     return (
-        <NavBarContainer>
-            <Logo color="white" />
-            <MenuToggle toggle={toggle} isOpen={isOpen} />
-            <MenuLinks isOpen={isOpen} router={router} />
-        </NavBarContainer>
+        <Container as="nav" mb="2ch" maxWidth={"150ch"}>
+            <NavBarContainer>
+                <Logo color="white" />
+
+                <MenuToggle toggle={onToggle} isOpen={isOpen} />
+                <Box display={{ base: "none", md: "block" }}>
+                    <MenuLinks router={router} />
+                </Box>
+            </NavBarContainer>
+
+
+            <Collapse in={isOpen}>
+                <Box display={{ base: "block", md: "none" }} w="full">
+                    <MenuLinks router={router} />
+                </Box>
+
+            </Collapse>
+        </Container>
+
+
+
     );
 };
 export default NavBar;
@@ -42,7 +59,7 @@ const MenuIcon = () => (
 
 const MenuToggle = ({ toggle, isOpen }) => {
     return (
-        <Box display={{ base: "block", md: "none" }} onClick={toggle}>
+        <Box onClick={toggle} display={{ base: "block", md: "none" }}>
             {isOpen ? <CloseIcon /> : <MenuIcon />}
         </Box>
     );
@@ -57,7 +74,7 @@ const MenuItem = ({ children, href = "/", router }) => {
                 p="1ch"
                 borderRadius="10px"
                 _focus={{ boxShadow: "none" }}
-                >
+            >
                 <Text display="block">
                     {children}
                 </Text>
@@ -66,36 +83,29 @@ const MenuItem = ({ children, href = "/", router }) => {
     );
 };
 
-const MenuLinks = ({ isOpen, router }) => {
+const MenuLinks = ({ router }) => {
     return (
-        <Box
-            display={{ base: isOpen ? "block" : "none", md: "block" }}
-            flexBasis={{ base: "100%", md: "auto" }}
+        <Stack
+            spacing={8}
+            align="center"
+            justify={["center", "space-between", "flex-end", "flex-end"]}
+            direction={["column", "row", "row", "row"]}
+            pt={[4, 4, 0, 0]}
         >
-            <Stack
-                spacing={8}
-                align="center"
-                justify={["center", "space-between", "flex-end", "flex-end"]}
-                direction={["column", "row", "row", "row"]}
-                pt={[4, 4, 0, 0]}
-            >
-                <MenuItem href="/" router={router}>Home</MenuItem>
-                <MenuItem href="/resume" router={router}>Resume</MenuItem>
-            </Stack>
-        </Box>
+            <MenuItem href="/" router={router}>Home</MenuItem>
+            <MenuItem href="/resume" router={router}>Resume</MenuItem>
+        </Stack>
     );
 };
 
 const NavBarContainer = ({ children }) => {
     return (
         <Flex
-            as="nav"
             align="center"
             justify="space-between"
             wrap="wrap"
             color={"white"}
             p="2ch"
-            mb="2ch"
         >
             {children}
         </Flex>

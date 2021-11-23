@@ -4,7 +4,7 @@ import React from "react";
 export default function Logo(props) {
     return (
         <Box {...props}>
-            <Text fontSize="lg" fontWeight="bold">
+            <Text fontSize="2xl" fontWeight="bold" fontFamily="Segoe UI">
                 Griveau Jordan
             </Text>
         </Box>

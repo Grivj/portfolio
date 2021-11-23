@@ -7,7 +7,7 @@ const Layout = ({ children, router }) => {
     return (
         <>
             <Meta />
-            <Container as="main" p={["0", "0 10ch"]} minHeight="100vh" maxWidth="130ch">
+            <Container as="main" p={0} minHeight="100vh" maxWidth="full">
                 <NavBar router={router} />
                 {children}
                 <Footer />
