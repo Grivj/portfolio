@@ -28,7 +28,7 @@ const AppNavItem = (props: TABSProps) => {
                 <Flex h="inherit" alignContent="center" alignItems="center" flexWrap="wrap" padding="12px 16px">
                     {props.file_type &&
                         <Box marginRight={"5px"}>
-                            <Image alt="" src={`files_logos/file_type_${props.file_type}.svg`} w="20px" h="20px" />
+                            <Image alt={`${props.file_type} file type icon`} src={`files_logos/file_type_${props.file_type}.svg`} w="20px" h="20px" />
                         </Box>
                     }
                     <Box as="span" fontFamily="Inter" fontWeight="400">

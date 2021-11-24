@@ -1,4 +1,4 @@
-import { Box, Collapse, Fade, Flex, useDisclosure } from "@chakra-ui/react"
+import { Box, Collapse, Fade, Flex, Image, Text, useDisclosure } from "@chakra-ui/react"
 import Nav from './Nav'
 
 interface AppProps {
@@ -11,7 +11,7 @@ const App: React.FC<AppProps> = ({ bodyPadding = ["2ch"], children }) => {
     return (
         <Box
             backgroundColor="#1E1E1E"
-            borderRadius={["0", "10px"]}
+            borderRadius={["0", "0", "0", "10px"]}
             overflow="hidden"
             boxShadow="dark-lg"
             opacity="0.85"
@@ -20,15 +20,18 @@ const App: React.FC<AppProps> = ({ bodyPadding = ["2ch"], children }) => {
                 flexDir={"column"}
                 height="inherit"
             >
-                <Flex alignItems="center">
-                    <Box
-                        minWidth="15px" minHeight="15px"
-                        margin="0 20px"
-                        borderRadius="50%"
-                        backgroundColor="#FFB83D"
-                        cursor="pointer"
-                        onClick={onToggle}
-                    />
+                <Flex direction="column">
+                    <Flex alignItems="center" p="1ch 2ch" gridGap="20px" backgroundColor="#3C3C3C" justifyContent={"space-between"}>
+                        <Box
+                            w="16px" h="16px"
+                            borderRadius="50%"
+                            backgroundColor="#FFB83D"
+                            cursor="pointer"
+                            onClick={onToggle}
+                        />
+                        <Text as="h1" fontSize="1.2em">Griveau Jordan - portfolio</Text>
+                        <Image alt="Profile picture" src="profile.png" h="28px" />
+                    </Flex>
                     <Nav />
                 </Flex>
                 <Collapse in={isOpen}>
