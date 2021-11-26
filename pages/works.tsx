@@ -1,26 +1,21 @@
+import { Box, Flex } from "@chakra-ui/react"
 import App from '../components/App/App'
-import Code from '../components/App/Code'
 
 const Works = () => (
-    <App>
-        <Code code={
-`
-import React, { useState } from "react";
-
-function Example() {
-const [count, setCount] = useState(0);
-
-return (
-<div>
-    <p>You clicked {count} times</p>
-    <button onClick={() => setCount(count + 1)}>
-    Click me
-    </button>
-</div>
-);
-}
-`.trim()
-        } language="jsx"/>
+    <App bodyPadding={"0"}>
+        <Flex>
+            <Flex direction="column">
+                <Box>
+                    <p>Docker</p>
+                </Box>
+                <Box>
+                    <p>Docker</p>
+                </Box>
+                <Box>
+                    <p>Docker</p>
+                </Box>
+            </Flex>
+        </Flex>
     </App>
 )
 
