@@ -1,4 +1,4 @@
-import WorksLayout from '../components/App/Works'
+import WorksLayout from '../../components/App/Works'
 
 
 const Works = () => (

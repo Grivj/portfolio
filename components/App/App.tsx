@@ -1,4 +1,4 @@
-import { Box, Collapse, Fade, Flex, Image, Text, useDisclosure } from "@chakra-ui/react"
+import { Box, Collapse, Flex, Image, Text, useDisclosure } from "@chakra-ui/react"
 import Nav from './Nav'
 
 interface AppProps {
@@ -30,17 +30,14 @@ const App: React.FC<AppProps> = ({ bodyPadding = ["2ch"], children }) => {
                             onClick={onToggle}
                         />
                         <Text as="h1" fontSize="1.2em">Griveau Jordan - portfolio</Text>
-                        <Image alt="Profile picture" src="profile.png" h="28px" />
+                        <Image alt="Profile picture" src="/profile.png" h="28px" />
                     </Flex>
                     <Nav />
                 </Flex>
                 <Collapse in={isOpen}>
-                    <Fade in={true}>
-                        <Box padding={bodyPadding}>
-                            {children}
-                        </Box>
-                    </Fade>
-
+                    <Box padding={bodyPadding}>
+                        {children}
+                    </Box>
                 </Collapse>
             </Flex>
         </Box>
