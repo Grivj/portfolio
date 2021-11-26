@@ -2,7 +2,9 @@ import WorksLayout from '../components/App/Works'
 
 
 const Works = () => (
-    <WorksLayout />
+    <WorksLayout>
+        No project selected
+    </WorksLayout>
 )
 
 export default Works

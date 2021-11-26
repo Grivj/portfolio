@@ -16,7 +16,7 @@ const AppNav = () => {
 
 const AppNavItem = (props: TABSProps) => {
     const router = useRouter()
-    const isActive = props.href === router.pathname
+    const isActive = props.href.split('/')[1] === router.pathname.split('/')[1]
     return (
         <NextLink href={props.href} passHref>
             <Button

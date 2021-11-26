@@ -2,7 +2,9 @@ import WorksLayout from '../../components/App/Works'
 
 
 const Works = () => (
-    <WorksLayout />
+    <WorksLayout>
+        Another alo
+    </WorksLayout>
 )
 
 export default Works
