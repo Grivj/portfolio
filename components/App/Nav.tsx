@@ -5,7 +5,13 @@ import { useRouter } from "next/router"
 const AppNav = () => {
 
     return (
-        <Flex direction={{ base: "column", md: "row" }} alignItems="stretch" w="full" flexWrap="wrap">
+        <Flex
+            direction={{ base: "column", md: "row" }}
+            alignItems="stretch"
+            w="full"
+            flexWrap="wrap"
+            backgroundColor="#2D2D2D"
+        >
             {TABS.map((props, index) => (
                 <AppNavItem key={index} {...props} />
             ))}
@@ -22,7 +28,7 @@ const AppNavItem = (props: TABSProps) => {
             <Button
                 padding="0"
                 borderRadius="0"
-                background={isActive ? "#1E1E1E" : "#2D2D2D"}
+                background={isActive ? "#1E1E1E" : ""}
                 _focus={{ boxShadow: "none" }}
             >
                 <Flex h="inherit" alignContent="center" alignItems="center" flexWrap="wrap" padding="12px 16px">

@@ -32,17 +32,7 @@ const Code = (props: CodeProps) => (
                 as="pre"
                 className={className}
                 overflow="auto"
-                sx={{
-                    '&::-webkit-scrollbar': {
-                        borderRadius: '10px',
-                        height: '10px',
-                        backgroundColor: `#2D2D2D`,
-                    },
-                    '&::-webkit-scrollbar-thumb': {
-                        backgroundColor: `#424242`,
-                        borderRadius: '10px',
-                    },
-                }}
+
             >
                 {tokens.map((line, i) => (
                     <Line key={i} {...getLineProps({ line, key: i })}>

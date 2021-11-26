@@ -7,7 +7,7 @@ const Work = () => {
 
     return (
         <WorksLayout>
-            <Flex>
+            <Flex flexWrap="wrap">
                 <Image
                     h="128px"
                     w="128px"

@@ -1,4 +1,5 @@
 import { Box, Collapse, Flex, Image, Text, useDisclosure } from "@chakra-ui/react"
+import Footer from '../Footer'
 import Nav from './Nav'
 
 interface AppProps {
@@ -9,16 +10,23 @@ const App: React.FC<AppProps> = ({ bodyPadding = ["2ch"], children }) => {
     const { isOpen, onToggle } = useDisclosure({ 'defaultIsOpen': true })
 
     return (
-        <Box
-            backgroundColor="#1E1E1E"
-            borderRadius={{base:"0", xl:"10px"}}
-            overflow="hidden"
-            boxShadow="dark-lg"
-            opacity="0.85"
+        <Flex
+            as="main"
+            alignItems="center"
+            justifyContent="center"
+            w="100vw"
+            h="100vh"
+            p={{ base: "0", sm: "0", lg: "3% 10%", xl: "5% 15%", '2xl': "5% 20%" }}
         >
             <Flex
                 flexDir={"column"}
-                height="inherit"
+                backgroundColor="#1E1E1E"
+                borderRadius={{ base: "0", sm: "0", lg: "10px", xl: "10px", '2xl': "10px" }}
+                width="full"
+                h="full"
+                overflow="hidden"
+                boxShadow="dark-lg"
+                opacity="0.85"
             >
                 <Flex direction="column">
                     <Flex alignItems="center" p="1ch 2ch" gridGap="20px" backgroundColor="#3C3C3C" justifyContent={"space-between"}>
@@ -34,13 +42,14 @@ const App: React.FC<AppProps> = ({ bodyPadding = ["2ch"], children }) => {
                     </Flex>
                     <Nav />
                 </Flex>
-                <Collapse in={isOpen}>
-                    <Box padding={bodyPadding}>
+                <Collapse in={isOpen} style={{ flex: "1", overflow: "auto" }}>
+                    <Box padding={bodyPadding} height="full">
                         {children}
                     </Box>
                 </Collapse>
+                <Footer />
             </Flex>
-        </Box>
+        </Flex>
     )
 }
 

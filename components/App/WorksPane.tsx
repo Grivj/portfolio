@@ -17,7 +17,7 @@ export const WorkPane = ({ defaultIsOpen = false, title, children }: WorkPanePro
     const { isOpen, onToggle } = useDisclosure({ 'defaultIsOpen': defaultIsOpen })
 
     return (
-        <Box w="[300px, auto]">
+        <Box className="chakra-dont-set-collapse" maxWidth={{base:"full", sm:"20ch", lg:"20ch", xl:"30ch", '2xl':"40ch"}}>
             <Box role="button"
                 p="1ch"
                 fontSize="11px"
@@ -35,7 +35,7 @@ export const WorkPane = ({ defaultIsOpen = false, title, children }: WorkPanePro
                         ? <ChevronDownIcon fontSize="16px" />
                         : <ChevronRightIcon fontSize="16px" />
                     }
-                    <h3>{title}</h3>
+                    <Text as="h3" whiteSpace="nowrap" textOverflow="ellipsis" overflow="hidden">{title}</Text>
                 </Flex>
                 <Box
                     padding="3px 6px"
@@ -51,7 +51,7 @@ export const WorkPane = ({ defaultIsOpen = false, title, children }: WorkPanePro
                     {Children.count(children)}
                 </Box>
             </Box>
-            <Collapse in={isOpen}>
+            <Collapse in={isOpen} >
                 <Flex direction="column">
                     {children}
                 </Flex>
