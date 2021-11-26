@@ -49,6 +49,7 @@ interface TABSProps {
 }
 
 const TABS: TABSProps[] = [
+    { name: "README", extension: ".md", file_type: "markdown", href: "/readme" },
     { name: "skills", extension: ".py", file_type: "python", href: "/skills" },
     { name: "interests", extension: ".json", file_type: "json", href: "/interests" },
     { name: "education", extension: ".md", file_type: "markdown", href: "/education" },

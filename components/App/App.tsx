@@ -11,7 +11,7 @@ const App: React.FC<AppProps> = ({ bodyPadding = ["2ch"], children }) => {
     return (
         <Box
             backgroundColor="#1E1E1E"
-            borderRadius={["0", "0", "0", "10px"]}
+            borderRadius={{base:"0", xl:"10px"}}
             overflow="hidden"
             boxShadow="dark-lg"
             opacity="0.85"

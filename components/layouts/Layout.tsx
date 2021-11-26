@@ -10,7 +10,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
         <>
             <Meta />
-            <Container as="main" p={0} minHeight="100vh" maxWidth={"72em"}>
+            <Container as="main" padding={{base:"0", xl:"4ch 0"}} minHeight="100vh" maxWidth={{base:"100em", xl:"78em"}}>
                 {children}
                 <Footer />
             </Container>

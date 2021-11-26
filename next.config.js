@@ -5,7 +5,7 @@ module.exports = {
     return [
       {
         source: '/',
-        destination: '/skills',
+        destination: '/readme',
         permanent: true,
       },
     ]

@@ -17,7 +17,7 @@ export const WorkPane = ({ defaultIsOpen = false, title, children }: WorkPanePro
     const { isOpen, onToggle } = useDisclosure({ 'defaultIsOpen': defaultIsOpen })
 
     return (
-        <Box w="300px">
+        <Box w="[300px, auto]">
             <Box role="button"
                 p="1ch"
                 fontSize="11px"
@@ -76,11 +76,11 @@ export const WorkPaneBody = ({ title, iconPath, description, href }: WorkPaneBod
                 alignItems="center"
                 w="full"
                 boxSizing="border-box"
-                p="0.5ch"
+                p="1ch"
                 gridGap={"5px"}
                 cursor="pointer"
-                // _hover={{ background: '#2a2d2e' }}
-                // _active={{ background: '#37373d' }}
+                _hover={{ background: '#2a2d2e' }}
+                _active={{ background: '#37373d' }}
                 background={isActive ? "#37373d" : ""}
             >
                 <Image
