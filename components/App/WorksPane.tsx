@@ -1,8 +1,8 @@
 import { ChevronDownIcon, ChevronRightIcon } from "@chakra-ui/icons"
 import { Box, Collapse, Flex, Image, Text, useDisclosure } from "@chakra-ui/react"
 import NextLink from "next/link"
-import React, { Children } from "react"
 import { useRouter } from "next/router"
+import React, { Children } from "react"
 
 
 
@@ -10,14 +10,13 @@ interface WorkPaneProps {
     defaultIsOpen?: boolean
     children: React.ReactNode
     title: string
-
 }
 
 export const WorkPane = ({ defaultIsOpen = false, title, children }: WorkPaneProps) => {
     const { isOpen, onToggle } = useDisclosure({ 'defaultIsOpen': defaultIsOpen })
 
     return (
-        <Box className="chakra-dont-set-collapse" maxWidth={{base:"full", sm:"20ch", lg:"20ch", xl:"30ch", '2xl':"40ch"}}>
+        <Box className="chakra-dont-set-collapse" w={["full", "200px", "250px", "300px"]}>
             <Box role="button"
                 p="1ch"
                 fontSize="11px"

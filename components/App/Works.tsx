@@ -49,7 +49,7 @@ const Works: React.FC = ({ children }) => {
 
     return (
         <App bodyPadding={"0"}>
-            <Flex direction={{base:'column', sm:'row'}} height="inherit">
+            <Flex direction={{ base: 'column', sm: 'row' }} height="full" overflow="auto">
                 <Flex direction="column" backgroundColor="#252526">
                     {WorksPaneItems.map((pane, paneIndex) => (
                         <WorkPane key={paneIndex} defaultIsOpen={true} title={pane.title}>
@@ -65,7 +65,7 @@ const Works: React.FC = ({ children }) => {
                         </WorkPane>
                     ))}
                 </Flex>
-                <Box w="full" p="2ch">
+                <Box w="full" p="2ch" overflow="auto">
                     {children}
                 </Box>
             </Flex>

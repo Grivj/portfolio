@@ -20,33 +20,32 @@ const App: React.FC<AppProps> = ({ bodyPadding = ["2ch"], children }) => {
         >
             <Flex
                 flexDir={"column"}
-                backgroundColor="#1E1E1E"
                 borderRadius={{ base: "0", sm: "0", lg: "10px", xl: "10px", '2xl': "10px" }}
                 width="full"
                 h="full"
                 overflow="hidden"
                 boxShadow="dark-lg"
-                opacity="0.85"
+                opacity="0.9"
             >
                 <Flex direction="column">
                     <Flex alignItems="center" p="1ch 2ch" gridGap="20px" backgroundColor="#3C3C3C" justifyContent={"space-between"}>
-                        <Box
+                        {/* <Box
                             w="16px" h="16px"
                             borderRadius="50%"
                             backgroundColor="#FFB83D"
                             cursor="pointer"
                             onClick={onToggle}
-                        />
+                        /> */}
                         <Text as="h1" fontSize="1.2em">Griveau Jordan - portfolio</Text>
                         <Image alt="Profile picture" src="/profile.png" h="28px" />
                     </Flex>
                     <Nav />
                 </Flex>
-                <Collapse in={isOpen} style={{ flex: "1", overflow: "auto" }}>
-                    <Box padding={bodyPadding} height="full">
-                        {children}
-                    </Box>
-                </Collapse>
+                {/* <Collapse in={isOpen} style={{ flex: "1", overflow: "auto" }}> */}
+                <Box padding={bodyPadding} backgroundColor="#1E1E1E" overflow="auto" flex="1" >
+                    {children}
+                </Box>
+                {/* </Collapse> */}
                 <Footer />
             </Flex>
         </Flex>
