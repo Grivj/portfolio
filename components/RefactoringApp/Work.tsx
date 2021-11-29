@@ -39,13 +39,13 @@ const Work: React.FC = ({ children }) => {
 
 
 const WorkContainer: React.FC = ({ children }) => (
-    <Flex>
+    <Flex direction={["column", "row"]}>
         {children}
     </Flex>
 )
 
 const WorkRightContainer: React.FC = ({ children }) => (
-    <Flex direction="column" bg="#252526" w="300px">
+    <Flex direction="column" bg="#252526" minWidth={["100px", "200px", "200px", "300px"]}>
         {children}
     </Flex>
 )
