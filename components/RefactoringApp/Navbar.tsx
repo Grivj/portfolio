@@ -2,10 +2,9 @@ import { Flex, Box, HStack, Image, Text, Button, background } from "@chakra-ui/r
 import NextLink from "next/link"
 import { useRouter } from "next/router"
 
-
 const Navbar = () => (
     <NavbarContainer>
-        <NavbarItem title="Link.css" href="/refactoringworks" fileType="css" />
+        <NavbarItem title="Works" href="/refactoringworks" />
         <NavbarItem title="Contact.yml" href="/contact" fileType="yaml" />
     </NavbarContainer>
 )
@@ -20,7 +19,7 @@ const NavbarContainer: React.FC = ({ children }) => (
 interface ItemProps {
     title: string
     href: string
-    fileType: string
+    fileType?: string
 }
 
 const NavbarItem = ({ title, href, fileType }: ItemProps) => {
@@ -44,7 +43,7 @@ const NavbarItem = ({ title, href, fileType }: ItemProps) => {
                     alt={`Nav item icon - ${fileType}`}
                     src={iconPath}
                 />
-                <Text>
+                <Text as={isActive ? 'i' : 'p'}>
                     {title}
                 </Text>
             </HStack>
