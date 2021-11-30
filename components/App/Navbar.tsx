@@ -4,7 +4,8 @@ import { useRouter } from "next/router"
 
 const Navbar = () => (
     <NavbarContainer>
-        <NavbarItem title="README.md" href="/readme" />
+        <NavbarItem title="README.md" href="/readme" fileType="markdown" />
+        <NavbarItem title="bio.md" href="/bio" fileType="markdown" />
         <NavbarItem title="socials.yml" href="/socials" fileType="yaml" />
         <NavbarItem title="works" href="/works" />
     </NavbarContainer>

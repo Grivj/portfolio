@@ -33,7 +33,7 @@ const Layout: React.FC<LayoutProps> = ({ isMaximized, isOpen, setIsMaximized, on
                 height="full"
                 borderRadius={isMaximized ? "0" : { base: "0", lg: "10px" }}
                 overflow="hidden"
-                fontSize={{ base: "16px", lg: "18px" }}
+                fontSize={{ base: "16px" }}
                 boxShadow={isMaximized ? "" : "dark-lg"}
             >
                 <Flex>
