@@ -1,6 +1,6 @@
-import { Box, Button, Flex, HStack, Image, Link, Tag, Text } from "@chakra-ui/react"
+import { ArrowForwardIcon } from "@chakra-ui/icons"
+import { Box, Flex, HStack, Image, Link, Tag, Text } from "@chakra-ui/react"
 import Pane, { PaneItem } from "./Pane"
-
 
 const Work: React.FC = ({ children }) => {
 
@@ -11,7 +11,7 @@ const Work: React.FC = ({ children }) => {
                     <PaneItem
                         title="Adversarial examples"
                         intro="AE detection via input transformation"
-                        thumbnailPath="/files_logos/file_type_image.svg"
+                        thumbnailPath="/files_logos/file_type_next.svg"
                         href="/refactoringworks/worktest"
                     />
                     <PaneItem
@@ -39,20 +39,25 @@ const Work: React.FC = ({ children }) => {
 
 
 const WorkContainer: React.FC = ({ children }) => (
-    <Flex direction={["column", "row"]}>
+    <Flex direction={{ base: "column", lg: "row" }} flex={1} height="full" overflow="auto">
         {children}
     </Flex>
 )
 
 const WorkRightContainer: React.FC = ({ children }) => (
-    <Flex direction="column" bg="#252526" minWidth={["100px", "200px", "200px", "300px"]}>
+    <Flex
+        direction="column"
+        bg="#252526"
+        w={{ base: "100%", lg: "200px", xl: "300px" }}
+        minWidth={{ base: "100%", lg: "200px", xl: "300px" }}
+    >
         {children}
     </Flex>
 )
 
 
 const WorkLeftContainer: React.FC = ({ children }) => (
-    <Box flexGrow={1} p="10px">
+    <Box flexGrow={1} p="10px" overflow="auto">
         {children}
     </Box>
 )
@@ -70,7 +75,14 @@ interface HeaderProps {
 }
 
 export const WorkHeader = ({ title, intro, thumbnailPath, tags, links }: HeaderProps) => (
-    <Flex borderBottom="1px solid #888888" gridGap="10px" p="20px 0">
+    <Flex
+        direction={["column", "row"]}
+        alignItems={["center", "left"]}
+        borderBottom="1px solid #888888"
+        gridGap="10px"
+        p="20px 0"
+        mb="20px"
+    >
         <Image
             h="100px"
             w="100px"
@@ -78,8 +90,8 @@ export const WorkHeader = ({ title, intro, thumbnailPath, tags, links }: HeaderP
             src={thumbnailPath}
         />
         <Box>
-            <Text as="h1">{title}</Text>
-            <Text as="sub">{intro}</Text>
+            <Text as="h1" fontSize="1.6em">{title}</Text>
+            <Text noOfLines={2}>{intro}</Text>
             {tags &&
                 <HStack>
                     {tags.map((tag, index) => (
@@ -102,12 +114,11 @@ export const WorkHeader = ({ title, intro, thumbnailPath, tags, links }: HeaderP
                         <Link key={index} href={link.href} isExternal>
                             <Tag key={index}
                                 fontSize="10px"
-                                m="4px 0"
                                 p="2px 4px"
                                 borderRadius="2px"
                                 border="1px solid"
                                 bg="#007acc"
-                            >View on {link.title}</Tag>
+                            ><ArrowForwardIcon mr="5px" />View on {link.title}</Tag>
                         </Link>
                     ))}
                 </HStack>
@@ -116,5 +127,10 @@ export const WorkHeader = ({ title, intro, thumbnailPath, tags, links }: HeaderP
     </Flex>
 )
 
+export const WorkBody: React.FC = ({ children }) => (
+    <Box p="10px">
+        {children}
+    </Box>
+)
 
 export default Work

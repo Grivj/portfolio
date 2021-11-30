@@ -34,6 +34,7 @@ const Code = ({ code, language }: CodeProps) => (
                 overflow="auto"
                 fontFamily="Cascadia Code"
                 p="10px"
+                flex={1}
             >
                 {tokens.map((line, i) => (
                     <Line key={i} {...getLineProps({ line, key: i })}>

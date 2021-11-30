@@ -4,9 +4,11 @@ const styles = {
   global: {
     body: {
       fontFamily: "Segoe UI",
-      fontSize: "16px",
+      fontSize: "18px",
       bgGradient: "linear(to-tl, #7928CA, #FF0080)",
       minHeight: "100vh",
+      textRendering: "optimizeLegibility",
+      WebkitFontSmoothing: "antialiased",
     },
     ":not(.chakra-dont-set-collapse) > .chakra-collapse": {
       overflow: "auto !important",

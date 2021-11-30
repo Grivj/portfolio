@@ -1,4 +1,4 @@
-import Code from '../components/App/Code'
+import Code from '../components/RefactoringApp/Code'
 import Layout from '../components/RefactoringApp/Layout'
 
 const CodeContent = `

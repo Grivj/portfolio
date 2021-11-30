@@ -83,7 +83,7 @@ export const PaneItem = ({ title, intro, thumbnailPath, href }: ItemProps) => {
                 />
                 <Box isTruncated>
                     <Text fontWeight="bold" isTruncated>{title}</Text>
-                    <Text isTruncated as="sub">{intro}</Text>
+                    <Text isTruncated fontSize="0.8em">{intro}</Text>
                 </Box>
             </HStack>
         </NextLink>
