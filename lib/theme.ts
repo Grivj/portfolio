@@ -14,8 +14,8 @@ const styles = {
       overflow: "auto !important",
     },
     "&::-webkit-scrollbar": {
-      borderRadius: "10px",
-      height: "10px",
+      width: "5px",
+      height: "5px",
       backgroundColor: `#2D2D2D`,
     },
     "&::-webkit-scrollbar-thumb": {

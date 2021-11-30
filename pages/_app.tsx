@@ -1,5 +1,7 @@
-import { ChakraProvider } from "@chakra-ui/react"
+import { ChakraProvider, useDisclosure } from "@chakra-ui/react"
 import type { AppProps } from 'next/app'
+import { useState } from "react"
+import AppLayout from "../components/App/Layout"
 import Layout from "../components/layouts/Layout"
 import theme from "../lib/theme"
 // import '../styles/AppCode.css'
@@ -7,10 +9,19 @@ import '../styles/globals.css'
 
 
 function App({ Component, pageProps, router }: AppProps) {
+  const [isMaximized, setIsMaximized] = useState(false)
+  const { isOpen, onToggle } = useDisclosure({ 'defaultIsOpen': true })
+
+
   return (
     <ChakraProvider theme={theme}>
       <Layout>
-        <Component {...pageProps} key={router.route} />
+        <AppLayout
+          isMaximized={isMaximized} setIsMaximized={setIsMaximized}
+          isOpen={isOpen} onToggle={onToggle}
+        >
+          <Component {...pageProps} key={router.route} />
+        </AppLayout>
       </Layout>
     </ChakraProvider>
   )

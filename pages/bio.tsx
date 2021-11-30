@@ -1,11 +1,13 @@
 import Code from '../components/App/Code'
 
 const CodeContent = `
-#Welcome
+#My story...
+
+
 `.trim()
 
-const Contact = () => (
+const Bio = () => (
     <Code code={CodeContent} language="yaml" />
 )
 
-export default Contact
+export default Bio

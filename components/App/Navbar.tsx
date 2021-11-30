@@ -4,8 +4,9 @@ import { useRouter } from "next/router"
 
 const Navbar = () => (
     <NavbarContainer>
-        <NavbarItem title="works" href="/works" />
+        <NavbarItem title="README.md" href="/readme" />
         <NavbarItem title="socials.yml" href="/socials" fileType="yaml" />
+        <NavbarItem title="works" href="/works" />
     </NavbarContainer>
 )
 
@@ -43,7 +44,7 @@ const NavbarItem = ({ title, href, fileType }: ItemProps) => {
                     alt={`Nav item icon - ${fileType}`}
                     src={iconPath}
                 />
-                <Text as={isActive ? 'i' : 'p'}>
+                <Text color={isActive ? '#00C543' : ''}>
                     {title}
                 </Text>
             </HStack>

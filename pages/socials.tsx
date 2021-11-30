@@ -1,5 +1,4 @@
 import Code from '../components/App/Code'
-import Layout from '../components/App/Layout'
 
 const CodeContent = `
 - name: GitHub
@@ -10,9 +9,7 @@ const CodeContent = `
 `.trim()
 
 const Contact = () => (
-    <Layout>
-        <Code code={CodeContent} language="yaml" />
-    </Layout>
+  <Code code={CodeContent} language="yaml" />
 )
 
 export default Contact
