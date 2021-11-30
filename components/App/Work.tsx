@@ -12,7 +12,7 @@ const Work: React.FC = ({ children }) => {
                         title="Adversarial examples"
                         intro="AE detection via input transformation"
                         thumbnailPath="/files_logos/file_type_next.svg"
-                        href="/refactoringworks/worktest"
+                        href="/works/detection"
                     />
                     <PaneItem
                         title="Adversarial examples"
@@ -96,7 +96,6 @@ export const WorkHeader = ({ title, intro, thumbnailPath, tags, links }: HeaderP
                 <HStack>
                     {tags.map((tag, index) => (
                         <Tag key={index}
-                            fontSize="10px"
                             m="4px 0"
                             p="2px 4px"
                             borderRadius="2px"
@@ -113,8 +112,7 @@ export const WorkHeader = ({ title, intro, thumbnailPath, tags, links }: HeaderP
                     {links.map((link, index) => (
                         <Link key={index} href={link.href} isExternal>
                             <Tag key={index}
-                                fontSize="10px"
-                                p="2px 4px"
+                                p="4px 10px"
                                 borderRadius="2px"
                                 border="1px solid"
                                 bg="#007acc"

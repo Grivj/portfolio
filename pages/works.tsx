@@ -1,10 +1,13 @@
 import { Text } from "@chakra-ui/react"
-import WorksLayout from '../components/App/Works'
+import Layout from '../components/App/Layout'
+import Work from '../components/App/Work'
 
-const Works = () => (
-    <WorksLayout>
-        <Text fontSize="2em">No project selected</Text>
-    </WorksLayout>
+const RefactoringWorks = () => (
+    <Layout>
+        <Work>
+            No project selected
+        </Work>
+    </Layout>
 )
 
-export default Works
+export default RefactoringWorks

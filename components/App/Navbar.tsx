@@ -4,7 +4,7 @@ import { useRouter } from "next/router"
 
 const Navbar = () => (
     <NavbarContainer>
-        <NavbarItem title="works" href="/refactoringworks" />
+        <NavbarItem title="works" href="/works" />
         <NavbarItem title="socials.yml" href="/socials" fileType="yaml" />
     </NavbarContainer>
 )
