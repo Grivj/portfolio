@@ -4,14 +4,14 @@ import { useRouter } from "next/router"
 
 const Navbar = () => (
     <NavbarContainer>
-        <NavbarItem title="Works" href="/refactoringworks" />
-        <NavbarItem title="Contact.yml" href="/contact" fileType="yaml" />
+        <NavbarItem title="works" href="/refactoringworks" />
+        <NavbarItem title="socials.yml" href="/socials" fileType="yaml" />
     </NavbarContainer>
 )
 
 
 const NavbarContainer: React.FC = ({ children }) => (
-    <Flex bg="#252526">
+    <Flex bg="#252526" direction={{ base: "column", sm: "row" }} flex={1}>
         {children}
     </Flex>
 )

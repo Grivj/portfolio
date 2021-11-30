@@ -31,9 +31,9 @@ const Layout: React.FC = ({ children }) => {
                 boxShadow={isMaximized ? "" : "dark-lg"}
             >
                 <HStack>
-                    <HStack m="0 2ch">
+                    <HStack m="0 2ch" gridGap="8px">
                         <Box
-                            w="16px" h="16px"
+                            w={{ base: "16px", lg: "18px", xl: "21px" }} h={{ base: "16px", lg: "18px", xl: "21px" }}
                             borderRadius="50%"
                             backgroundColor="#FFB83D"
                             cursor="pointer"
@@ -41,7 +41,7 @@ const Layout: React.FC = ({ children }) => {
                             role="button"
                         />
                         <Box
-                            w="16px" h="16px"
+                            w={{ base: "16px", lg: "18px", xl: "21px" }} h={{ base: "16px", lg: "18px", xl: "21px" }}
                             borderRadius="50%"
                             backgroundColor="#00C543"
                             cursor="pointer"

@@ -1,6 +1,6 @@
 import { Text } from "@chakra-ui/react"
-import Work, { WorkHeader, WorkBody } from "../../components/RefactoringApp/Work"
-import Layout from "../../components/RefactoringApp/Layout"
+import Work, { WorkHeader, WorkBody } from "../../components/App/Work"
+import Layout from "../../components/App/Layout"
 
 
 const WorkTest = () => (
