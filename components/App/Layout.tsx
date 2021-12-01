@@ -29,14 +29,14 @@ const Layout: React.FC<LayoutProps> = ({ isMaximized, isOpen, setIsMaximized, on
             <Flex
                 direction="column"
                 bg="#1E1E1E"
-                opacity="0.9"
+                opacity="0.95"
                 height="full"
                 borderRadius={isMaximized ? "0" : { base: "0", lg: "10px" }}
                 overflow="hidden"
                 fontSize={{ base: "16px" }}
                 boxShadow={isMaximized ? "" : "dark-lg"}
             >
-                <Flex>
+                <Flex bg="#252526">
                     <HStack m="0 2ch" gridGap="8px" display={{ base: "none", lg: "flex" }}>
                         <Box
                             w={{ base: "16px", lg: "18px" }} h={{ base: "16px", lg: "18px" }}

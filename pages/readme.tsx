@@ -1,11 +1,15 @@
 import Code from "../components/App/Code"
 
 const CodeContent = `
-#Welcome to my portfolio
+#Griveau Jordan's portfolio
+
+This is my first little project using Next.js
 
 
-About this little project...
-----------------------------
+## Stack
+
+- [Next.js](https://nextjs.org/)
+- [Chakra UI](https://chakra-ui.com/)
 
 
 `.trim()

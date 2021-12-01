@@ -1,5 +1,5 @@
 import { ArrowForwardIcon } from "@chakra-ui/icons"
-import { Box, Flex, HStack, Image, Link, Tag, Text } from "@chakra-ui/react"
+import { Box, Flex, HStack, Image, Link, Tag, Text, Container } from "@chakra-ui/react"
 import Pane, { PaneItem } from "./Pane"
 
 const Work: React.FC = ({ children }) => {
@@ -11,23 +11,17 @@ const Work: React.FC = ({ children }) => {
                     <PaneItem
                         title="Adversarial examples"
                         intro="AE detection via input transformation"
-                        thumbnailPath="/files_logos/file_type_next.svg"
-                        href="/works/detection"
-                    />
-                    <PaneItem
-                        title="Adversarial examples"
-                        intro="AE detection via input transformation"
-                        thumbnailPath="/files_logos/file_type_image.svg"
-                        href="/works/detection"
-                    />
-                    <PaneItem
-                        title="Adversarial examples"
-                        intro="AE detection via input transformation"
-                        thumbnailPath="/files_logos/file_type_image.svg"
+                        thumbnailPath="/works/detection/thumbnail.png"
                         href="/works/detection"
                     />
                 </Pane>
-                <Pane title="others">
+                <Pane title="Personal projects" defaultIsOpen={true}>
+                <PaneItem
+                        title="Portfolio"
+                        intro="My personal homepage"
+                        thumbnailPath="/works/portfolio/thumbnail.png"
+                        href="/works/portfolio"
+                    />
                 </Pane>
             </WorkRightContainer>
             <WorkLeftContainer>
@@ -57,9 +51,9 @@ const WorkRightContainer: React.FC = ({ children }) => (
 
 
 const WorkLeftContainer: React.FC = ({ children }) => (
-    <Box flexGrow={1} p="10px" overflow="auto">
+    <Container flexGrow={1} p="10px" overflow="auto" maxWidth={{base: "100%", lg: "990px"}}>
         {children}
-    </Box>
+    </Container>
 )
 
 interface LinkProps {

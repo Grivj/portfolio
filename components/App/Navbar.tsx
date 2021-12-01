@@ -13,7 +13,7 @@ const Navbar = () => (
 
 
 const NavbarContainer: React.FC = ({ children }) => (
-    <Flex bg="#252526" direction={{ base: "column", sm: "row" }} flex={1}>
+    <Flex direction={{ base: "column", sm: "row" }} flex={1}>
         {children}
     </Flex>
 )
