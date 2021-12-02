@@ -8,7 +8,7 @@ const Meta = ({ title, keywords, description }) => {
             <meta name='keywords' content={keywords} />
             <meta name="author" content="Griveau Jordan" />
             <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-            <link rel="shortcut icon" href="../public/favicon.ico" type="image/x-icon" />
+            <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
             <title>Griveau Jordan</title>
         </Head>
     )

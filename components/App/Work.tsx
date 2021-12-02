@@ -28,6 +28,12 @@ const Work: React.FC = ({ children }) => {
                         thumbnailPath="/works/xrays/thumbnail.png"
                         href="/works/xrays"
                     />
+                    <PaneItem
+                        title="Blackjack card counting trainer"
+                        intro="[In Progress] Card counting trainer for Blackjack"
+                        thumbnailPath="/works/blackjack/thumbnail.png"
+                        href="/works/blackjack"
+                    />
                 </Pane>
             </WorkRightContainer>
             <WorkLeftContainer>
