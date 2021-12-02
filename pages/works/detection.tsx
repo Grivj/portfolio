@@ -92,7 +92,7 @@ const WorkDetection = () => (
     <Work>
         <WorkHeader
             title="Adversarial Examples detection"
-            intro="Research conducted for my MS. degree."
+            intro="[In Progress] Research conducted for my MS. degree."
             thumbnailPath="/works/detection/thumbnail.png"
             tags={["Python", "PyTorch", "Jupyter Notebook", "Google Colab"]}
             links={

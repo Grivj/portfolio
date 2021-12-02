@@ -10,7 +10,7 @@ const Work: React.FC = ({ children }) => {
                 <Pane title="research" defaultIsOpen={true}>
                     <PaneItem
                         title="Adversarial examples"
-                        intro="AE detection via input transformation"
+                        intro="[In Progress] AE detection via input transformation"
                         thumbnailPath="/works/detection/thumbnail.png"
                         href="/works/detection"
                     />
@@ -33,6 +33,14 @@ const Work: React.FC = ({ children }) => {
                         intro="[In Progress] Card counting trainer for Blackjack"
                         thumbnailPath="/works/blackjack/thumbnail.png"
                         href="/works/blackjack"
+                    />
+                </Pane>
+                <Pane title="for fun" defaultIsOpen={true}>
+                    <PaneItem
+                        title="Codewars"
+                        intro="[Never Ending] Personal contributions on Codewars.com"
+                        thumbnailPath="/works/codewars/thumbnail.png"
+                        href="/works/codewars"
                     />
                 </Pane>
             </WorkRightContainer>
@@ -122,7 +130,7 @@ export const WorkHeader = ({ title, intro, thumbnailPath, tags, links }: HeaderP
                                 borderRadius="2px"
                                 border="1px solid"
                                 bg="#007acc"
-                            ><ArrowForwardIcon mr="5px" />View on {link.title}</Tag>
+                            ><ArrowForwardIcon mr="5px" />{link.title}</Tag>
                         </Link>
                     ))}
                 </HStack>
