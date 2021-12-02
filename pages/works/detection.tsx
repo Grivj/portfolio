@@ -11,7 +11,7 @@ const WorkDetection = () => (
             title="Adversarial Examples detection"
             intro="Research conducted for my MS. degree."
             thumbnailPath="/works/detection/thumbnail.png"
-            tags={["Python", "PyTorch"]}
+            tags={["Python", "PyTorch", "Jupyter Notebook", "Google Colab"]}
             links={
                 [
                     { href: "https://github.com/", title: "GitHub" },
@@ -20,7 +20,7 @@ const WorkDetection = () => (
             }
         />
         <WorkBody>
-            <WorkSectionTitle>Abstract</WorkSectionTitle>
+            <WorkSectionTitle mt="0">Abstract</WorkSectionTitle>
             <Text>
                 Similar to other machine learning algorithms, neural networks have been shown to be vulnerable to adversarial examples, <i>i.e.</i> inputs containing specifically crafted perturbations whose only objective is to fool a network into misclassification. On the other hand, neural networks are known to be much more robust to <i>random</i> perturbations in the input.
                 This motivated us to propose an easy-to-deploy adversarial example detection method based on measuring prediction inconsistencies before and after applying random noise to an input image.

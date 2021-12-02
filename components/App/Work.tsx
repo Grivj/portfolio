@@ -1,5 +1,5 @@
 import { ArrowForwardIcon } from "@chakra-ui/icons"
-import { Box, Flex, HStack, Image, Link, Tag, Text, Container } from "@chakra-ui/react"
+import { Box, Container, Flex, HStack, Image, Link, Tag, Text } from "@chakra-ui/react"
 import Pane, { PaneItem } from "./Pane"
 
 const Work: React.FC = ({ children }) => {
@@ -25,8 +25,8 @@ const Work: React.FC = ({ children }) => {
                     <PaneItem
                         title="X-Ray Scans classification"
                         intro="Detecting Covid from X-Ray chest scans"
-                        thumbnailPath="/works/xray/thumbnail.png"
-                        href="/works/xray"
+                        thumbnailPath="/works/xrays/thumbnail.png"
+                        href="/works/xrays"
                     />
                 </Pane>
             </WorkRightContainer>
@@ -131,10 +131,10 @@ export const WorkBody: React.FC = ({ children }) => (
     </Box>
 )
 
-export const WorkSectionTitle: React.FC = ({ children }) => (
+export const WorkSectionTitle = ({ mt = "40px", children }: { mt?: string, children: React.ReactNode }) => (
     <Text
         borderBottom="0.1rem solid #2d242c"
-        fontSize="1.5em" mt="40px" fontWeight="700"
+        fontSize="1.5em" mt={mt} fontWeight="700"
     >
         {children}
     </Text>
