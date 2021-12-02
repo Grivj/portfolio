@@ -2,7 +2,7 @@ import {
     Flex, Image, ListItem, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent,
     PopoverHeader, PopoverTrigger, Text, UnorderedList
 } from "@chakra-ui/react"
-import Work, { WorkBody, WorkHeader } from "../../components/App/Work"
+import Work, { WorkBody, WorkHeader, WorkSectionTitle } from "../../components/App/Work"
 
 
 const WorkDetection = () => (
@@ -20,14 +20,14 @@ const WorkDetection = () => (
             }
         />
         <WorkBody>
-            <Text fontStyle="italic" fontSize="1.2em">Abstract</Text>
+            <WorkSectionTitle>Abstract</WorkSectionTitle>
             <Text>
                 Similar to other machine learning algorithms, neural networks have been shown to be vulnerable to adversarial examples, <i>i.e.</i> inputs containing specifically crafted perturbations whose only objective is to fool a network into misclassification. On the other hand, neural networks are known to be much more robust to <i>random</i> perturbations in the input.
                 This motivated us to propose an easy-to-deploy adversarial example detection method based on measuring prediction inconsistencies before and after applying random noise to an input image.
                 We evaluate our method on subsets of three popular benchmarks (Dogs vs Cats, CIFAR-10, and ImageNet) and show that it achieves high adversarial example detection performance for various attacks on higher resolution images. The main advantages of our approach are its simplicity, low computational cost, and the fact that it does not require any prior knowledge of the attack used, which makes it easy to integrate our method into other defence frameworks.
             </Text>
 
-            <Text fontSize="1.2em" mt="40px" fontWeight="700">What I did</Text>
+            <WorkSectionTitle>What I did</WorkSectionTitle>
             <Text>
                 During this research, I compared the difference of <i>robustness</i> between
                 normal images and adversarial examples and showed that a difference exist.
@@ -36,7 +36,7 @@ const WorkDetection = () => (
                 Secondly, I showed that this differences can be leveraged to detect the nature of an input image (e.g. normal or adversarial).
             </Text>
 
-            <Text fontSize="1.2em" mt="40px" fontWeight="700">Some graphics from the paper</Text>
+            <WorkSectionTitle>Some graphics from the paper</WorkSectionTitle>
 
             <Flex wrap="wrap" m="10px auto" justifyContent="center">
                 <Popover id="1">
@@ -127,7 +127,7 @@ const WorkDetection = () => (
                     </PopoverContent>
                 </Popover>
             </Flex>
-            <Text fontSize="1.2em" mt="40px" fontWeight="700">Presentation slides</Text>
+            <WorkSectionTitle>Presentation slides</WorkSectionTitle>
             <Flex wrap="wrap" m="10px auto" justifyContent="center">
                 <Image
                     w="full"

@@ -16,11 +16,17 @@ const Work: React.FC = ({ children }) => {
                     />
                 </Pane>
                 <Pane title="Personal projects" defaultIsOpen={true}>
-                <PaneItem
+                    <PaneItem
                         title="Portfolio"
                         intro="My personal homepage"
                         thumbnailPath="/works/portfolio/thumbnail.png"
                         href="/works/portfolio"
+                    />
+                    <PaneItem
+                        title="X-Ray Scans classification"
+                        intro="Detecting Covid from X-Ray chest scans"
+                        thumbnailPath="/works/xray/thumbnail.png"
+                        href="/works/xray"
                     />
                 </Pane>
             </WorkRightContainer>
@@ -51,7 +57,7 @@ const WorkRightContainer: React.FC = ({ children }) => (
 
 
 const WorkLeftContainer: React.FC = ({ children }) => (
-    <Container flexGrow={1} p="10px" overflow="auto" maxWidth={{base: "100%", lg: "990px"}}>
+    <Container flexGrow={1} p="10px" overflow="auto" maxWidth={{ base: "100%", lg: "990px" }}>
         {children}
     </Container>
 )
@@ -123,6 +129,15 @@ export const WorkBody: React.FC = ({ children }) => (
     <Box p="10px">
         {children}
     </Box>
+)
+
+export const WorkSectionTitle: React.FC = ({ children }) => (
+    <Text
+        borderBottom="0.1rem solid #2d242c"
+        fontSize="1.5em" mt="40px" fontWeight="700"
+    >
+        {children}
+    </Text>
 )
 
 export default Work
