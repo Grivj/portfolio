@@ -7,7 +7,7 @@ const Navbar = () => (
         <NavbarItem title="README.md" href="/readme" fileType="markdown" />
         <NavbarItem title="bio.md" href="/bio" fileType="markdown" />
         <NavbarItem title="socials.yml" href="/socials" fileType="yaml" />
-        <NavbarItem title="works" href="/works" />
+        <NavbarItem title="works" href="/works/detection" />
     </NavbarContainer>
 )
 
