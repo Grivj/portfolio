@@ -1,6 +1,6 @@
-import { Box, Link, Text, Image, Tag, UnorderedList, ListItem } from "@chakra-ui/react"
-import Work, { WorkBody, WorkHeader, WorkSectionTitle } from "../../components/App/Work"
+import { Box, Link, Tag, Text } from "@chakra-ui/react"
 import Code from "../../components/App/Code"
+import Work, { WorkBody, WorkHeader, WorkSectionTitle } from "../../components/App/Work"
 
 const sudokuCode = `
 """
@@ -237,27 +237,20 @@ const WorkCodewars = () => (
 
         />
         <WorkBody>
-            <Text>I've recently started using <Link externalLink href="https://www.codewars.com/">Codewars.com</Link> and been enjoying it so far.</Text>
+            <Text>I've recently started using <Link isExternal href="https://www.codewars.com/">Codewars.com</Link> and been enjoying it so far.</Text>
             <WorkSectionTitle>Some problems I liked</WorkSectionTitle>
-            <UnorderedList>
-                <ListItem>
-                    <Box>
-                        <Text>
-                            <Link externalLink href="https://www.codewars.com/kata/5296bc77afba8baa690002d7">Sudoku Solver <Tag color="#3c7ebb">3 kyu</Tag></Link>
-                            <Code code={sudokuCode} language="python" />
-                        </Text>
-                    </Box>
-                </ListItem>
-                <ListItem>
-                    <Box>
-                        <Text>
-                            <Link externalLink href="https://www.codewars.com/kata/5263c6999e0f40dee200059d">The observed PIN <Tag color="#3c7ebb">4 kyu</Tag></Link>
-                            <Code code={observedCode} language="python" />
-                        </Text>
-                    </Box>
-                </ListItem>
-            </UnorderedList>
-
+            <Box m="10px 0">
+                <Text>
+                    <Link isExternal href="https://www.codewars.com/kata/5296bc77afba8baa690002d7">Sudoku Solver <Tag color="#3c7ebb">3 kyu</Tag></Link>
+                    <Code code={sudokuCode} language="python" />
+                </Text>
+            </Box>
+            <Box>
+                <Text>
+                    <Link isExternal href="https://www.codewars.com/kata/5263c6999e0f40dee200059d">The observed PIN <Tag color="#3c7ebb">4 kyu</Tag></Link>
+                    <Code code={observedCode} language="python" />
+                </Text>
+            </Box>
         </WorkBody>
     </Work>
 )

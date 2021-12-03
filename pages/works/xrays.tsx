@@ -37,7 +37,7 @@ const WorkXrays = () => (
 
             <WorkSectionTitle>Implementing Grad-CAM</WorkSectionTitle>
 
-            <Text>I implemented Grad-CAM (<Link externalLink href="https://arxiv.org/abs/1610.02391">See paper on arXiv</Link>) to visualize important decision regions of the images.</Text>
+            <Text>I implemented Grad-CAM (<Link isExternal href="https://arxiv.org/abs/1610.02391">See paper on arXiv</Link>) to visualize important decision regions of the images.</Text>
             <Text>
                 You can see it on a few samples:
             </Text>
