@@ -13,7 +13,7 @@ const LineNo = styled.span`
   text-align: right;
   padding-right: 1em;
   user-select: none;
-  opacity: 0.5;
+  opacity: 0.3;
 `;
 
 const LineContent = styled.span`
@@ -35,6 +35,7 @@ const Code = ({ code, language }: CodeProps) => (
                 fontFamily="Cascadia Code"
                 p="10px"
                 flex={1}
+                whiteSpace={'break-spaces'}
             >
                 {tokens.map((line, i) => (
                     <Line key={i} {...getLineProps({ line, key: i })}>
