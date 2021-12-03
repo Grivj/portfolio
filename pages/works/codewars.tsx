@@ -242,14 +242,16 @@ const WorkCodewars = () => (
             <Box m="10px 0">
                 <Text>
                     <Link isExternal href="https://www.codewars.com/kata/5296bc77afba8baa690002d7">Sudoku Solver <Tag color="#3c7ebb">3 kyu</Tag></Link>
-                    <Code code={sudokuCode} language="python" />
                 </Text>
+                <Code code={sudokuCode} language="python" />
+
             </Box>
             <Box>
                 <Text>
                     <Link isExternal href="https://www.codewars.com/kata/5263c6999e0f40dee200059d">The observed PIN <Tag color="#3c7ebb">4 kyu</Tag></Link>
-                    <Code code={observedCode} language="python" />
                 </Text>
+                <Code code={observedCode} language="python" />
+
             </Box>
         </WorkBody>
     </Work>
