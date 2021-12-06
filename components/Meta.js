@@ -22,6 +22,18 @@ const Meta = ({ title, keywords, description }) => {
                 as="font"
                 crossOrigin=""
             />
+            <link
+                rel="preload"
+                href="/fonts/SegoeUI/segoeuii.ttf"
+                as="font"
+                crossOrigin=""
+            />
+            <link
+                rel="preload"
+                href="/fonts/SegoeUI/segoeuib.ttf"
+                as="font"
+                crossOrigin=""
+            />
         </Head>
     )
 }
