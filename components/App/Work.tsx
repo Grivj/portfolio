@@ -38,7 +38,7 @@ const Work: React.FC = ({ children }) => {
                 <Pane title="for fun" defaultIsOpen={true}>
                     <PaneItem
                         title="Codewars"
-                        intro="[Never Ending] Personal contributions on Codewars.com"
+                        intro="Personal contributions on Codewars.com"
                         thumbnailPath="/works/codewars/thumbnail.png"
                         href="/works/codewars"
                     />

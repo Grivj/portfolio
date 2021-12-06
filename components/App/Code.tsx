@@ -4,11 +4,11 @@ import React from "react";
 import styled from "styled-components";
 
 
-const Line = styled.div`
+export const Line = styled.div`
   display: table-row;
 `;
 
-const LineNo = styled.span`
+export const LineNo = styled.span`
   display: table-cell;
   text-align: right;
   padding-right: 1em;
@@ -29,7 +29,7 @@ const LineNo = styled.span`
   }
 `;
 
-const LineContent = styled.span`
+export const LineContent = styled.span`
   display: table-cell;
 `;
 

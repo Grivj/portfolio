@@ -110,16 +110,8 @@ const WorkDetection = () => (
                 We evaluate our method on subsets of three popular benchmarks (Dogs vs Cats, CIFAR-10, and ImageNet) and show that it achieves high adversarial example detection performance for various attacks on higher resolution images. The main advantages of our approach are its simplicity, low computational cost, and the fact that it does not require any prior knowledge of the attack used, which makes it easy to integrate our method into other defence frameworks.
             </Text>
 
-            <WorkSectionTitle>What I did</WorkSectionTitle>
-            <Text>
-                During this research, I compared the difference of <i>robustness</i> between
-                normal images and adversarial examples and showed that a difference exist.
-            </Text>
-            <Text>
-                Secondly, I showed that this differences can be leveraged to detect the nature of an input image (e.g. normal or adversarial).
-            </Text>
-
             <WorkSectionTitle>Some graphics from the paper</WorkSectionTitle>
+            <Text fontStyle="italic" fontSize="0.8em" opacity="0.5">Graphs can be clicked to get additional information.</Text>
 
             <Flex wrap="wrap" m="10px auto" justifyContent="center">
                 <Popover id="1">

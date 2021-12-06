@@ -6,6 +6,9 @@ const CodeContent = `
 
 - name: LinkedIn
   link: https://www.linkedin.com/in/griveau-jordan/
+
+- name: Gmail
+  address: griveau.jordan@gmail.com
 `.trim()
 
 const Contact = () => (

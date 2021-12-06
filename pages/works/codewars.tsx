@@ -243,8 +243,8 @@ const WorkCodewars = () => (
     <Work>
         <WorkHeader
             title="Codewars"
-            intro="[Never Ending] Personal contributions on Codewars.com"
-            thumbnailPath="/works/blackjack/thumbnail.png"
+            intro="Personal contributions on Codewars.com"
+            thumbnailPath="/works/codewars/thumbnail.png"
             tags={["Python", "UnitTesting"]}
             links={
                 [

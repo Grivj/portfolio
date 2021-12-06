@@ -2,61 +2,32 @@ import Code from '../components/App/Code'
 
 const CodeContent = `
 #My story...
-*in 1.40min*
 
-
-I'm __Griveau Jordan__ from France, and my journey as a developer began in 2012.
-
+I'm Griveau Jordan from France, and my journey as a developer began in 2012.
 I first started learning about web development at school between 2012 and 2016.
-I had the opportunity to work as an intern first,
-then as an apprentice, and finally as an independent.
-These experiences all confirmed my appeal for development.
+I had the opportunity to work as an intern first, then as an apprentice, and finally as an independent.
 
 But...
 ======
-In late 2017, things took a turn for the unknown.
-I decided to take a small break of ten days to travel to China.
-As soon as I was out of the airport,
-I knew that China would become a part of my story.
-Even before the end of the trip,
-I couldn't wait to be back again.
+In late 2017, things took a welcomed turn!
+I took a small break of ten days to travel to China.
+As soon as I was out of the airport, I knew that those ten days in China wouldn't be the last.
 
-So, when I arrived back in Paris,
-I continued working for a few months to save some money before resigning.
-Money that I used to pay for a six-month learning Mandarin program that I found online.
-So there I was, in China again for six months in Tianjin.
+And so, after being back in Paris, working and saving some money, I enrolled in a six months program to learn Mandarin in Tianjin.
+Life was good, and every day was about learning something new.
 
-Life was good, and every day was about learning something new,
-the language, the food, the people, etc.
-During that time, I also took on some more freelance projects.
-I guess that I started missing typing in VS code!
+After these six months of experimenting with life in China, I was even more determined to come again...
 
-After six months of experiencing China,
-I was even more determined to stay.
-So, I started looking for other ways to come back.
-I searched for a few weeks and landed some appealing jobs.
-But, despite the agreements from the companies,
-my visa applications were all rejected.
-Work visa issuance from China can be a pain sometimes!
+**So ...** I searched for a few weeks and landed some appealing jobs.
+But despite the agreements from the companies, my visa applications were all rejected 🥲.
+Seeing that this approach wasn't leading anywhere and that getting a working visa would require me to get at least an MS. degree, I dipped into my savings once again to apply for a one-year Mandarin learning program at Hunan University.
+I wanted to learn Chinese the right way and then continue with a Master's degree once more acclimated to the culture and language.
 
-Seeing that this approach wasn't leading anywhere,
-I dipped into my savings again and went back to China as a student one more time.
-This time,
-I enrolled in a one year Mandarin learning program at 湖南大学 (Hunan University).
-I was determined to learn Chinese the right way,
-which could be helpful to get a work visa in the future.
+During this year of studying, I met new friends who sparked my interest in *A.I.*.
+So, I applied for an MS. degree in Computer Science at the same University and received a full governmental scholarship (CSC).
 
-At the University,
-I made new friends with bright MS. degree students studying deep learning.
-My interest in A.I. grew after talking with them so,
-at the end of my one-year program, I applied for the same MS. degree in C.S.
-I got accepted and even awarded a full governmental scholarship (CSC).
-
-Now...
-======
-With Covid, I am back in France and unable to go back to China.
-In the meantime,
-I am looking for new opportunities and see where life brings me. 
+Now that there is Covid, I am back in France and unable to go back to China for the foreseeable future.
+In the meantime, I am looking for new opportunities and see where life brings me.
 
 *To continue.*
 `.trim()

@@ -4,10 +4,10 @@ import { useRouter } from "next/router"
 
 const Navbar = () => (
     <NavbarContainer>
-        <NavbarItem title="README.md" href="/readme" fileType="markdown" />
-        <NavbarItem title="bio.md" href="/bio" fileType="markdown" />
-        <NavbarItem title="socials.yml" href="/socials" fileType="yaml" />
-        <NavbarItem title="works" href="/works/detection" />
+        <NavbarItem title="README.md" href="/readme" fileType="markdown.svg" />
+        <NavbarItem title="bio.md" href="/bio" fileType="markdown.svg" />
+        <NavbarItem title="socials.yml" href="/socials" fileType="yaml.svg" />
+        <NavbarItem title="works" href="/works/detection" fileType="project.png" />
     </NavbarContainer>
 )
 
@@ -28,7 +28,7 @@ const NavbarItem = ({ title, href, fileType }: ItemProps) => {
     const router = useRouter()
     const isActive = href.split('/')[1] === router.pathname.split('/')[1]
     const backgroundColor = isActive ? "#1E1E1E" : ""
-    const iconPath = fileType ? `/files_logos/file_type_${fileType}.svg` : "/files_logos/file_type_file.svg"
+    const iconPath = fileType ? `/files_logos/file_type_${fileType}` : "/files_logos/file_type_file.svg"
 
     return (
         <NextLink href={href} passHref>
