@@ -178,7 +178,7 @@ const WorkDetection = () => (
                         <PopoverCloseButton />
                         <PopoverHeader>Prediction differences</PopoverHeader>
                         <PopoverBody>
-                            This shows the difference between a normal image's logits and a noisy version's logits of the same image.
+                            This shows the difference between a normal image&apos;s logits and a noisy version&apos;s logits of the same image.
                         </PopoverBody>
                     </PopoverContent>
                 </Popover>
@@ -197,7 +197,7 @@ const WorkDetection = () => (
                         <PopoverCloseButton />
                         <PopoverHeader>Consistency</PopoverHeader>
                         <PopoverBody>
-                            This shows the difference between an adversarial examples's logits and a noisy version's logits of the same image.
+                            This shows the difference between an adversarial examples&apos;s logits and a noisy version&apos;s logits of the same image.
                         </PopoverBody>
                     </PopoverContent>
                 </Popover>

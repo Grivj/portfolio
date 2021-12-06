@@ -254,7 +254,7 @@ const WorkCodewars = () => (
 
         />
         <WorkBody>
-            <Text>I've recently started using <Link isExternal href="https://www.codewars.com/">Codewars.com</Link> and been enjoying it so far.</Text>
+            <Text>I&apos;ve recently started using <Link isExternal href="https://www.codewars.com/">Codewars.com</Link> and been enjoying it so far.</Text>
             <WorkSectionTitle>Some problems I liked</WorkSectionTitle>
             <Box m="10px 0">
                 <Text>
