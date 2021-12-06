@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "Segoe UI";
-  src: url("/fonts/SegoeUI/segoeui.ttf");
+  src: url("/fonts/SegoeUI/Segoe UI.woff");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: "Segoe UI";
-  src: url("/fonts/SegoeUI/segoeuii.ttf");
+  src: url("/fonts/SegoeUI/Segoe UI Italic.woff");
   font-style: italic;
   font-weight: 400;
   font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: "Segoe UI";
-  src: url("/fonts/SegoeUI/segoeuib.ttf");
+  src: url("/fonts/SegoeUI/Segoe UI Bold.woff");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
