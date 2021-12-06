@@ -14,6 +14,19 @@ const LineNo = styled.span`
   padding-right: 1em;
   user-select: none;
   opacity: 0.3;
+  overflow: hidden;
+  position: relative;
+
+  &:after {
+      content: " ";
+      display: block;
+        background: rgb(154, 134, 253);
+        height: -webkit-fill-available;
+        width: 2px;
+        content: '';
+        left: 8px;
+        position: absolute;
+  }
 `;
 
 const LineContent = styled.span`
