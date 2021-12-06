@@ -10,7 +10,6 @@ import '../styles/globals.css'
 
 function App({ Component, pageProps, router }: AppProps) {
   const [isMaximized, setIsMaximized] = useState(false)
-  const { isOpen, onToggle } = useDisclosure({ 'defaultIsOpen': true })
 
 
   return (
@@ -18,7 +17,6 @@ function App({ Component, pageProps, router }: AppProps) {
       <Layout>
         <AppLayout
           isMaximized={isMaximized} setIsMaximized={setIsMaximized}
-          isOpen={isOpen} onToggle={onToggle}
         >
           <Component {...pageProps} key={router.route} />
         </AppLayout>

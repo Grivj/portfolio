@@ -33,7 +33,7 @@ Where to find me:
 const Contact = () => (
     <>
         <Code code={CodeContent} language="markdown" />
-        <HStack ml="3em">
+        <HStack ml="3em" mb="1em">
             <Link isExternal href="https://www.linkedin.com/in/griveau-jordan/">
                 <Button fontFamily="Cascadia Code" color="rgb(255, 204, 153)">
                     LinkedIn

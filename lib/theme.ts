@@ -6,7 +6,6 @@ const styles = {
       fontFamily: "Segoe UI",
       fontSize: "18px",
       bgGradient: "linear(to-tl, #7928CA, #FF0080)",
-      minHeight: "100vh",
       textRendering: "optimizeLegibility",
       WebkitFontSmoothing: "antialiased",
     },
