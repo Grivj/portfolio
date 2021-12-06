@@ -1,5 +1,4 @@
 import Head from 'next/head'
-
 const Meta = ({ title, keywords, description }) => {
     return (
         <Head>
@@ -10,6 +9,19 @@ const Meta = ({ title, keywords, description }) => {
             <link rel="apple-touch-icon" href="apple-touch-icon.png" />
             <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
             <title>Griveau Jordan</title>
+
+            <link
+                rel="preload"
+                href="/fonts/CascadiaCode/CascadiaCode.ttf"
+                as="font"
+                crossOrigin=""
+            />
+            <link
+                rel="preload"
+                href="/fonts/SegoeUI/SEGOEUI.ttf"
+                as="font"
+                crossOrigin=""
+            />
         </Head>
     )
 }

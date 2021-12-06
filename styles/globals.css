@@ -1,8 +1,42 @@
+@font-face {
+  font-family: "Cascadia Code";
+  src: url("/fonts/CascadiaCode/CascadiaCode.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cascadia Code";
+  src: url("/fonts/CascadiaCode/CascadiaCodeItalic.ttf");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("/fonts/SegoeUI/SEGOEUI.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* @font-face {
+  font-family: "Segoe UI";
+  src: url("/fonts/SegoeUI/segoeuii.ttf");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+} */
+
+
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Segoe UI, sans-serif;
+  font-family: Segoe UI, Cascadia Code, sans-serif;
   font-size: 16px;
 }
 
