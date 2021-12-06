@@ -1,6 +1,5 @@
 import Code from "../components/App/Code"
-import { HStack, Link, Button } from "@chakra-ui/react"
-import { ExternalLinkIcon } from '@chakra-ui/icons'
+
 
 const CodeContent = `
 #About Me
@@ -31,22 +30,7 @@ Where to find me:
 `.trim()
 
 const Contact = () => (
-    <>
-        <Code code={CodeContent} language="markdown" />
-        <HStack ml="3em" mb="1em">
-            <Link isExternal href="https://www.linkedin.com/in/griveau-jordan/">
-                <Button fontFamily="Cascadia Code" color="rgb(255, 204, 153)">
-                    LinkedIn
-                    <ExternalLinkIcon mx='2px' />
-                </Button>
-            </Link>
-            <Link href="mailto:griveau.jordan@gmail.com">
-                <Button fontFamily="Cascadia Code" color="rgb(255, 204, 153)">
-                    Gmail
-                </Button>
-            </Link>
-        </HStack>
-    </>
+    <Code code={CodeContent} language="markdown" />
 )
 
 export default Contact

@@ -107,7 +107,7 @@ export const WorkHeader = ({ title, intro, thumbnailPath, tags, links }: HeaderP
             <Text as="h1" fontSize="1.6em">{title}</Text>
             <Text noOfLines={2}>{intro}</Text>
             {tags &&
-                <HStack>
+                <Flex flexWrap="wrap" gridGap="0 0.5em">
                     {tags.map((tag, index) => (
                         <Tag key={index}
                             m="4px 0"
@@ -119,10 +119,10 @@ export const WorkHeader = ({ title, intro, thumbnailPath, tags, links }: HeaderP
                             cursor="default"
                         >{tag}</Tag>
                     ))}
-                </HStack>
+                </Flex>
             }
             {links &&
-                <HStack>
+                <Flex flexWrap="wrap" gridGap="0 0.5em">
                     {links.map((link, index) => (
                         <Link key={index} href={link.href} isExternal>
                             <Tag key={index}
@@ -133,7 +133,7 @@ export const WorkHeader = ({ title, intro, thumbnailPath, tags, links }: HeaderP
                             ><ArrowForwardIcon mr="5px" />{link.title}</Tag>
                         </Link>
                     ))}
-                </HStack>
+                </Flex>
             }
         </Box>
     </Flex>
