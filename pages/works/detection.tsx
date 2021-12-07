@@ -1,7 +1,8 @@
 import {
-    Flex, Image, ListItem, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent,
+    Box, Flex, ListItem, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent,
     PopoverHeader, PopoverTrigger, Text, UnorderedList
 } from "@chakra-ui/react"
+import Image from "next/image"
 import Code from "../../components/App/Code"
 import Work, { WorkBody, WorkHeader, WorkSectionTitle } from "../../components/App/Work"
 
@@ -116,12 +117,15 @@ const WorkDetection = () => (
             <Flex wrap="wrap" m="10px auto" justifyContent="center">
                 <Popover id="1">
                     <PopoverTrigger>
-                        <Image
-                            w={{ base: "100%", md: "50%" }}
-                            src="/works/detection/fig2a.webp"
-                            alt="Consistency a"
-                            cursor="pointer"
-                        />
+                        <Box width={{ base: "100%", md: "50%" }}>
+                            <Image
+                                height="465px"
+                                width="730px"
+                                layout="responsive"
+                                src="/works/detection/fig2a.webp"
+                                alt="Consistency a"
+                            />
+                        </Box>
                     </PopoverTrigger>
                     <PopoverContent>
                         <PopoverArrow />
@@ -141,12 +145,15 @@ const WorkDetection = () => (
 
                 <Popover id="2">
                     <PopoverTrigger>
-                        <Image
-                            w={{ base: "100%", md: "50%" }}
-                            src="/works/detection/fig2b.webp"
-                            alt="Consistency b"
-                            cursor="pointer"
-                        />
+                        <Box width={{ base: "100%", md: "50%" }}>
+                            <Image
+                                height="465px"
+                                width="730px"
+                                layout="responsive"
+                                src="/works/detection/fig2b.webp"
+                                alt="Consistency b"
+                            />
+                        </Box>
                     </PopoverTrigger>
                     <PopoverContent>
                         <PopoverArrow />
@@ -166,12 +173,15 @@ const WorkDetection = () => (
 
                 <Popover id="3">
                     <PopoverTrigger>
-                        <Image
-                            w={{ base: "100%", md: "50%" }}
-                            src="/works/detection/fig3a.webp"
-                            alt="Logits difference normal image"
-                            cursor="pointer"
-                        />
+                        <Box width={{ base: "100%", md: "50%" }}>
+                            <Image
+                                height="500px"
+                                width="730px"
+                                layout="responsive"
+                                src="/works/detection/fig3a.webp"
+                                alt="Logits difference normal image"
+                            />
+                        </Box>
                     </PopoverTrigger>
                     <PopoverContent>
                         <PopoverArrow />
@@ -185,12 +195,15 @@ const WorkDetection = () => (
 
                 <Popover id="4">
                     <PopoverTrigger>
-                        <Image
-                            w={{ base: "100%", md: "50%" }}
-                            src="/works/detection/fig3b.webp"
-                            alt="Logits difference BIM adversarial example"
-                            cursor="pointer"
-                        />
+                        <Box width={{ base: "100%", md: "50%" }}>
+                            <Image
+                                height="500px"
+                                width="730px"
+                                layout="responsive"
+                                src="/works/detection/fig3b.webp"
+                                alt="Logits difference BIM adversarial example"
+                            />
+                        </Box>
                     </PopoverTrigger>
                     <PopoverContent>
                         <PopoverArrow />
@@ -200,52 +213,61 @@ const WorkDetection = () => (
                             This shows the difference between an adversarial examples&apos;s logits and a noisy version&apos;s logits of the same image.
                         </PopoverBody>
                     </PopoverContent>
-                </Popover>
-            </Flex>
+                </Popover >
+            </Flex >
             <WorkSectionTitle>Presentation slides</WorkSectionTitle>
             <Flex wrap="wrap" m="10px auto" justifyContent="center">
                 <Image
-                    w="full"
+                    width="946px"
+                    height="533px"
                     src="/works/detection/0002.webp"
                     alt="Slide 1"
                 />
                 <Image
-                    w="full"
+                    width="946px"
+                    height="533px"
                     src="/works/detection/0004.webp"
                     alt="Slide 2"
                 />
                 <Image
-                    w="full"
+                    width="946px"
+                    height="533px"
                     src="/works/detection/0005.webp"
                     alt="Slide 3"
                 />
                 <Image
-                    w="full"
+                    width="946px"
+                    height="533px"
                     src="/works/detection/0006.webp"
                     alt="Slide 4"
                 />
                 <Image
-                    w="full"
+                    width="946px"
+                    height="533px"
                     src="/works/detection/0007.webp"
                     alt="Slide 5"
                 />
                 <Image
-                    w="full"
+                    width="946px"
+                    height="533px"
                     src="/works/detection/0008.webp"
                     alt="Slide 6"
                 />
                 <Image
-                    w="full"
+                    width="946px"
+                    height="533px"
                     src="/works/detection/0009.webp"
                     alt="Slide 7"
                 />
                 <Image
-                    w="full"
+                    width="946px"
+                    height="533px"
                     src="/works/detection/0010.webp"
                     alt="Slide 8"
                 />
                 <Image
-                    w="full"
+                    width="946px"
+                    height="533px"
                     src="/works/detection/0011.webp"
                     alt="Slide 9"
                 />
@@ -254,8 +276,8 @@ const WorkDetection = () => (
             <WorkSectionTitle>Computing the metrics, code snippet</WorkSectionTitle>
             <Code code={metricsCode} language="python" />
 
-        </WorkBody>
-    </Work>
+        </WorkBody >
+    </Work >
 )
 
 export default WorkDetection

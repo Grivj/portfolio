@@ -1,6 +1,8 @@
-import { Flex, HStack, Image, Text } from "@chakra-ui/react"
+import { Flex, HStack, Text } from "@chakra-ui/react"
+import Image from "next/image"
 import NextLink from "next/link"
 import { useRouter } from "next/router"
+
 
 const Navbar = () => (
     <NavbarContainer>
@@ -40,8 +42,8 @@ const NavbarItem = ({ title, href, fileType }: ItemProps) => {
                 p="10px 20px"
             >
                 <Image
-                    h="24px"
-                    w="24px"
+                    height="24px"
+                    width="24px"
                     alt={`Nav item icon - ${fileType}`}
                     src={iconPath}
                 />

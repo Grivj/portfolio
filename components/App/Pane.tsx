@@ -1,10 +1,9 @@
 import { ChevronDownIcon, ChevronRightIcon } from "@chakra-ui/icons"
-import { Box, Collapse, Flex, HStack, Image, Text, useDisclosure } from "@chakra-ui/react"
-import React, { Children } from "react"
+import { Box, Collapse, Flex, HStack, Text, useDisclosure } from "@chakra-ui/react"
+import Image from "next/image"
 import NextLink from "next/link"
 import { useRouter } from "next/router"
-
-
+import React, { Children } from "react"
 
 interface PaneProps {
     title: string
@@ -75,13 +74,14 @@ export const PaneItem = ({ title, intro, thumbnailPath, href }: ItemProps) => {
                 cursor="pointer"
                 p="5px"
             >
-                <Image
-                    h="42px"
-                    w="42px"
-                    alt="Pane thumbnail"
-                    objectFit="cover"
-                    src={thumbnailPath}
-                />
+                <Box position="relative" minWidth="48px" minHeight="48px">
+                    <Image
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Pane thumbnail"
+                        src={thumbnailPath}
+                    />
+                </Box>
                 <Box isTruncated>
                     <Text fontWeight="bold" isTruncated>{title}</Text>
                     <Text isTruncated fontSize="0.8em">{intro}</Text>

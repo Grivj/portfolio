@@ -1,4 +1,5 @@
-import { Image, Link, Text } from "@chakra-ui/react"
+import { Link, Text, Box } from "@chakra-ui/react"
+import Image from "next/image"
 import Code from "../../components/App/Code"
 import Work, { WorkBody, WorkHeader, WorkSectionTitle } from "../../components/App/Work"
 
@@ -85,24 +86,32 @@ const WorkBlackjack = () => (
             <Text>Originally I started developing the website in Flask but recently switched to React.js.</Text>
 
             <WorkSectionTitle>Some design components</WorkSectionTitle>
+            {/* <Box w="full" position="relative"> */}
             <Image
-                w="100%"
+                height="823px"
+                width="946px"
+                layout="responsive"
+                objectFit="contain"
                 src="/works/blackjack/player_hand.webp"
                 alt="Player hand"
-                cursor="pointer"
             />
             <Image
-                w="100%"
+                height="100%"
+                width="100%"
+                layout="responsive"
+                objectFit="contain"
                 src="/works/blackjack/betting.webp"
                 alt="betting screen"
-                cursor="pointer"
             />
             <Image
-                w="100%"
+                height="100%"
+                width="100%"
+                layout="responsive"
+                objectFit="contain"
                 src="/works/blackjack/game.webp"
                 alt="Game screen"
-                cursor="pointer"
             />
+            {/* </Box> */}
 
             <WorkSectionTitle>Some code snippets</WorkSectionTitle>
             <Text fontFamily="Cascadia Code" opacity="0.5" fontStyle="italic">/models/hand.py</Text>

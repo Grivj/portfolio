@@ -1,4 +1,5 @@
-import { Image, Link, ListItem, Text, UnorderedList } from "@chakra-ui/react"
+import { Link, ListItem, Text, UnorderedList } from "@chakra-ui/react"
+import Image from "next/image"
 import Work, { WorkBody, WorkHeader, WorkSectionTitle } from "../../components/App/Work"
 
 
@@ -37,10 +38,10 @@ const WorkXrays = () => (
                 You can see it on a few samples:
             </Text>
             <Image
-                w="100%"
+                width="950px"
+                height="871px"
                 src="/works/xrays/grad-cam.webp"
                 alt="Consistency b"
-                cursor="pointer"
             />
 
             <WorkSectionTitle>Results and Limitations</WorkSectionTitle>

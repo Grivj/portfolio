@@ -1,5 +1,6 @@
 import { ArrowForwardIcon } from "@chakra-ui/icons"
-import { Box, Container, Flex, Image, Link, Tag, Text } from "@chakra-ui/react"
+import { Box, Container, Flex, Link, Tag, Text } from "@chakra-ui/react"
+import Image from "next/image"
 import Pane, { PaneItem } from "./Pane"
 
 const Work: React.FC = ({ children }) => {
@@ -98,8 +99,8 @@ export const WorkHeader = ({ title, intro, thumbnailPath, tags, links }: HeaderP
         mb="20px"
     >
         <Image
-            h="100px"
-            w="100px"
+            height="100px"
+            width="100px"
             alt="Work thumbnail"
             objectFit="cover"
             src={thumbnailPath}
