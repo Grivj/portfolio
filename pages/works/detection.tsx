@@ -93,7 +93,7 @@ const WorkDetection = () => (
         <WorkHeader
             title="Adversarial Examples detection"
             intro="[In Progress] Research conducted for my MS. degree."
-            thumbnailPath="/works/detection/thumbnail.png"
+            thumbnailPath="/works/detection/thumbnail.webp"
             tags={["Python", "PyTorch", "Jupyter Notebook", "Google Colab"]}
             links={
                 [
@@ -118,7 +118,7 @@ const WorkDetection = () => (
                     <PopoverTrigger>
                         <Image
                             w={{ base: "100%", md: "50%" }}
-                            src="/works/detection/fig2a.jpg"
+                            src="/works/detection/fig2a.webp"
                             alt="Consistency a"
                             cursor="pointer"
                         />
@@ -143,7 +143,7 @@ const WorkDetection = () => (
                     <PopoverTrigger>
                         <Image
                             w={{ base: "100%", md: "50%" }}
-                            src="/works/detection/fig2b.jpg"
+                            src="/works/detection/fig2b.webp"
                             alt="Consistency b"
                             cursor="pointer"
                         />
@@ -168,7 +168,7 @@ const WorkDetection = () => (
                     <PopoverTrigger>
                         <Image
                             w={{ base: "100%", md: "50%" }}
-                            src="/works/detection/fig3a.jpg"
+                            src="/works/detection/fig3a.webp"
                             alt="Logits difference normal image"
                             cursor="pointer"
                         />
@@ -187,7 +187,7 @@ const WorkDetection = () => (
                     <PopoverTrigger>
                         <Image
                             w={{ base: "100%", md: "50%" }}
-                            src="/works/detection/fig3b.jpg"
+                            src="/works/detection/fig3b.webp"
                             alt="Logits difference BIM adversarial example"
                             cursor="pointer"
                         />
@@ -206,43 +206,48 @@ const WorkDetection = () => (
             <Flex wrap="wrap" m="10px auto" justifyContent="center">
                 <Image
                     w="full"
-                    src="/works/detection/mti1.png"
+                    src="/works/detection/0002.webp"
                     alt="Slide 1"
                 />
                 <Image
                     w="full"
-                    src="/works/detection/mti2.png"
+                    src="/works/detection/0004.webp"
                     alt="Slide 2"
                 />
                 <Image
                     w="full"
-                    src="/works/detection/mti3.png"
+                    src="/works/detection/0005.webp"
                     alt="Slide 3"
                 />
                 <Image
                     w="full"
-                    src="/works/detection/mti4.png"
+                    src="/works/detection/0006.webp"
                     alt="Slide 4"
                 />
                 <Image
                     w="full"
-                    src="/works/detection/mti5.svg"
+                    src="/works/detection/0007.webp"
                     alt="Slide 5"
                 />
                 <Image
                     w="full"
-                    src="/works/detection/mti6.svg"
+                    src="/works/detection/0008.webp"
                     alt="Slide 6"
                 />
                 <Image
                     w="full"
-                    src="/works/detection/mti7.png"
+                    src="/works/detection/0009.webp"
                     alt="Slide 7"
                 />
                 <Image
                     w="full"
-                    src="/works/detection/mti8.svg"
+                    src="/works/detection/0010.webp"
                     alt="Slide 8"
+                />
+                <Image
+                    w="full"
+                    src="/works/detection/0011.webp"
+                    alt="Slide 9"
                 />
             </Flex>
 

@@ -7,7 +7,7 @@ const WorkXrays = () => (
         <WorkHeader
             title="Covid detection via X-Rays chest scans"
             intro="[Proof of concept] Using chest scans to identify if a patient has Covid-19"
-            thumbnailPath="/works/xrays/thumbnail.png"
+            thumbnailPath="/works/xrays/thumbnail.webp"
             tags={["PyTorch", "Python", "Jupyter Notebook", "FastAI"]}
 
         />
@@ -38,7 +38,7 @@ const WorkXrays = () => (
             </Text>
             <Image
                 w="100%"
-                src="/works/xrays/grad-cam.png"
+                src="/works/xrays/grad-cam.webp"
                 alt="Consistency b"
                 cursor="pointer"
             />

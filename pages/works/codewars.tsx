@@ -229,7 +229,7 @@ const WorkCodewars = () => (
         <WorkHeader
             title="Codewars"
             intro="Personal contributions on Codewars.com"
-            thumbnailPath="/works/codewars/thumbnail.png"
+            thumbnailPath="/works/codewars/thumbnail.webp"
             tags={["Python", "UnitTesting"]}
             links={
                 [

@@ -1,5 +1,5 @@
 import { ArrowForwardIcon } from "@chakra-ui/icons"
-import { Box, Container, Flex, HStack, Image, Link, Tag, Text } from "@chakra-ui/react"
+import { Box, Container, Flex, Image, Link, Tag, Text } from "@chakra-ui/react"
 import Pane, { PaneItem } from "./Pane"
 
 const Work: React.FC = ({ children }) => {
@@ -11,7 +11,7 @@ const Work: React.FC = ({ children }) => {
                     <PaneItem
                         title="Adversarial examples"
                         intro="[In Progress] AE detection via input transformation"
-                        thumbnailPath="/works/detection/thumbnail.png"
+                        thumbnailPath="/works/detection/thumbnail.webp"
                         href="/works/detection"
                     />
                 </Pane>
@@ -19,19 +19,19 @@ const Work: React.FC = ({ children }) => {
                     <PaneItem
                         title="Portfolio"
                         intro="My personal homepage"
-                        thumbnailPath="/works/portfolio/thumbnail.png"
+                        thumbnailPath="/works/portfolio/thumbnail.webp"
                         href="/works/portfolio"
                     />
                     <PaneItem
                         title="X-Ray Scans classification"
                         intro="Detecting Covid from X-Ray chest scans"
-                        thumbnailPath="/works/xrays/thumbnail.png"
+                        thumbnailPath="/works/xrays/thumbnail.webp"
                         href="/works/xrays"
                     />
                     <PaneItem
                         title="Blackjack card counting trainer"
                         intro="[In Progress] Card counting trainer for Blackjack"
-                        thumbnailPath="/works/blackjack/thumbnail.png"
+                        thumbnailPath="/works/blackjack/thumbnail.webp"
                         href="/works/blackjack"
                     />
                 </Pane>
@@ -39,7 +39,7 @@ const Work: React.FC = ({ children }) => {
                     <PaneItem
                         title="Codewars"
                         intro="Personal contributions on Codewars.com"
-                        thumbnailPath="/works/codewars/thumbnail.png"
+                        thumbnailPath="/works/codewars/thumbnail.webp"
                         href="/works/codewars"
                     />
                 </Pane>

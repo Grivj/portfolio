@@ -70,7 +70,7 @@ const WorkBlackjack = () => (
         <WorkHeader
             title="Blackjack card counting trainer"
             intro="[In Progress] Card counting trainer for Blackjack"
-            thumbnailPath="/works/blackjack/thumbnail.png"
+            thumbnailPath="/works/blackjack/thumbnail.webp"
             tags={["React.js", "Node.js", "TypeScript", "Figma"]}
 
         />
@@ -87,19 +87,19 @@ const WorkBlackjack = () => (
             <WorkSectionTitle>Some design components</WorkSectionTitle>
             <Image
                 w="100%"
-                src="/works/blackjack/player_hand.png"
+                src="/works/blackjack/player_hand.webp"
                 alt="Player hand"
                 cursor="pointer"
             />
             <Image
                 w="100%"
-                src="/works/blackjack/betting.png"
+                src="/works/blackjack/betting.webp"
                 alt="betting screen"
                 cursor="pointer"
             />
             <Image
                 w="100%"
-                src="/works/blackjack/game.png"
+                src="/works/blackjack/game.webp"
                 alt="Game screen"
                 cursor="pointer"
             />

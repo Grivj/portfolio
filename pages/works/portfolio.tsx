@@ -19,7 +19,7 @@ const WorkPortfolio = () => (
         <WorkHeader
             title="My portfolio"
             intro="My personal homepage made with Next.js"
-            thumbnailPath="/works/portfolio/thumbnail.png"
+            thumbnailPath="/works/portfolio/thumbnail.webp"
             tags={["React.js", "Next.js", "Chackra UI", "TypeScript", "JavaScript", "Figma", "Vercel"]}
             links={
                 [
