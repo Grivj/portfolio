@@ -1,4 +1,4 @@
-import { ChakraProvider, useDisclosure } from "@chakra-ui/react"
+import { ChakraProvider } from "@chakra-ui/react"
 import type { AppProps } from 'next/app'
 import { useState } from "react"
 import AppLayout from "../components/App/Layout"

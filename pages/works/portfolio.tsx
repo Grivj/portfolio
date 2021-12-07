@@ -1,6 +1,6 @@
-import Work, { WorkBody, WorkHeader, WorkSectionTitle } from "../../components/App/Work"
-import Code from "../../components/App/Code"
 import { Text } from "@chakra-ui/react"
+import Code from "../../components/App/Code"
+import Work, { WorkBody, WorkHeader, WorkSectionTitle } from "../../components/App/Work"
 
 const ProjectRootCode = `
 $ROOT
@@ -23,24 +23,27 @@ const WorkPortfolio = () => (
             tags={["React.js", "Next.js", "Chackra UI", "TypeScript", "JavaScript", "Figma"]}
             links={
                 [
-                    { href: "https://github.com/", title: "GitHub" },
+                    { href: "https://github.com/Grivj/portfolio", title: "GitHub" },
                     // { href: "https://github.com/", title: "arXiv" },
                 ]
             }
         />
         <WorkBody>
             <Text>
-                I made this portfolio first to well... have a portfolio and secondly to get some exposure to Node/React.
-                I chose Next.js, a framework built on top of Node to get that first exposure.
+                I built this portfolio to, ... well, have a portfolio but also to try React.js for the first time. It was also my first time using TS or even JS, which I tried my best to avoid previously.
             </Text>
             <br />
-            <Text>I tried to do a <b>VS Code-like</b> interface, designing all the components on Figma and later implementing them in React.</Text>
-            <Text>Learned about Hooks, states, ... </Text>
-
+            <Text>
+                I designed this portfolio trying to emulate VS Code&apos;s interface (Dark theme, I&apos;m no psycho).
+            </Text>
+            <br />
+            <Text>
+                It took some time, but I had a lot of fun learning about Hooks, Components states (struggled a bit with sharing states between parents/children btw), etc.
+            </Text>
             <WorkSectionTitle>Structure</WorkSectionTitle>
             <Code code={ProjectRootCode} language="markdown" />
         </WorkBody>
-    </Work>
+    </Work >
 )
 
 export default WorkPortfolio

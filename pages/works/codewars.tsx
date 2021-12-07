@@ -11,17 +11,6 @@ The Sudokus tested against your function will be "easy"
 (i.e. determinable; there will be no need to assume and test possibilities on unknowns)
 and can be solved with a brute-force approach.
 """
-
-import time
-import unittest
-from typing import List
-
-
-def sudoku(puzzle):
-    solver = SudokuSolver()
-    return solver(Sudoku(puzzle)).grid
-
-
 class Sudoku:
     """
     Sudoku base class
@@ -55,8 +44,10 @@ class Sudoku:
     def display(self):
         for row in self.grid:
             print(row)
+`.trim()
 
 
+const sudokuCode2 = `
 class SudokuSolver:
 
     def __call__(self, sudoku: Sudoku, verbose: bool = False):
@@ -109,8 +100,9 @@ class SudokuSolver:
             self.solved_sudoku.grid[x][y] = 0
 
         return False
+`.trim()
 
-
+const sudokuCode3 = `
 class SudokuTest(unittest.TestCase):
     def basic_tests(self):
         puzzle = [
@@ -140,17 +132,10 @@ class SudokuTest(unittest.TestCase):
         solver = SudokuSolver()
         solved = solver(Sudoku(puzzle))
 
-        self.assertEqual(solved.grid, solution,
-                         "Incorrect solution for the following puzzle: " + str(puzzle))
-
-
-def main():
-    test = SudokuTest()
-    test.basic_tests()
-
-
-if __name__ == '__main__':
-    main()
+        self.assertEqual(
+            solved.grid, solution,
+            "Incorrect solution for the following puzzle: " + str(puzzle)
+        )
 `.trim()
 
 const observedCode = `
@@ -261,6 +246,8 @@ const WorkCodewars = () => (
                     <Link isExternal href="https://www.codewars.com/kata/5296bc77afba8baa690002d7">Sudoku Solver <Tag color="#3c7ebb">3 kyu</Tag></Link>
                 </Text>
                 <Code code={sudokuCode} language="python" />
+                <Code code={sudokuCode2} language="python" />
+                <Code code={sudokuCode3} language="python" />
 
             </Box>
             <Box>

@@ -14,20 +14,21 @@ const CodeContent = `
   address: griveau.jordan@gmail.com
 `.trim()
 
+const CascadiaLink = ({ title, href }: { title: string, href: string }) => (
+  <Link isExternal href={href}>
+    <Button fontFamily="Cascadia Code" color="rgb(255, 204, 153)">
+      {title}
+      <ExternalLinkIcon mx='2px' />
+    </Button>
+  </Link>
+)
+
 const Contact = () => (
   <>
     <Flex ml="3em" m="1em" justifyContent="center" flexWrap="wrap" gridGap="0.5em">
-      <Link isExternal href="https://www.linkedin.com/in/griveau-jordan/">
-        <Button fontFamily="Cascadia Code" color="rgb(255, 204, 153)">
-          LinkedIn
-          <ExternalLinkIcon mx='2px' />
-        </Button>
-      </Link>
-      <Link href="mailto:griveau.jordan@gmail.com">
-        <Button fontFamily="Cascadia Code" color="rgb(255, 204, 153)">
-          Gmail
-        </Button>
-      </Link>
+      <CascadiaLink title="GitHub" href="https://github.com/Grivj" />
+      <CascadiaLink title="LinkedIn" href="https://www.linkedin.com/in/griveau-jordan/" />
+      <CascadiaLink title="Gmail" href="mailto:griveau.jordan@gmail.com" />
     </Flex>
 
     <Code code={CodeContent} language="yaml" />

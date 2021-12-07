@@ -25,8 +25,6 @@ I ❤️:
     - traveling in deep rural China
     - Stock market 📈
     - Crypto ₿
-
-Where to find me:
 `.trim()
 
 const Contact = () => (

@@ -1,4 +1,4 @@
-import { Box, Collapse, Container, Flex, HStack } from "@chakra-ui/react"
+import { Box, Container, Flex, HStack } from "@chakra-ui/react"
 import Footer from '../Footer'
 import Navbar from './Navbar'
 
