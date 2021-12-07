@@ -2,6 +2,11 @@ import { Link, Text } from "@chakra-ui/react"
 import Image from "next/image"
 import Code from "../../components/App/Code"
 import Work, { WorkBody, WorkHeader, WorkSectionTitle } from "../../components/App/Work"
+import Betting from "../../public/works/blackjack/betting.webp"
+import Game from "../../public/works/blackjack/game.webp"
+import PlayerHand from "../../public/works/blackjack/player_hand.webp"
+import ThumbBlackjack from "../../public/works/blackjack/thumbnail.webp"
+
 
 const handCode = `
 from dataclasses import dataclass, field
@@ -71,7 +76,7 @@ const WorkBlackjack = () => (
         <WorkHeader
             title="Blackjack card counting trainer"
             intro="[In Progress] Card counting trainer for Blackjack"
-            thumbnailPath="/works/blackjack/thumbnail.webp"
+            thumbnail={ThumbBlackjack}
             tags={["React.js", "Node.js", "TypeScript", "Figma"]}
 
         />
@@ -87,24 +92,18 @@ const WorkBlackjack = () => (
 
             <WorkSectionTitle>Some design components</WorkSectionTitle>
             <Image
-                height="823px"
-                width="946px"
-                layout="responsive"
-                src="/works/blackjack/player_hand.webp"
+                src={PlayerHand}
+                placeholder="blur"
                 alt="Player hand"
             />
             <Image
-                height="823px"
-                width="946px"
-                layout="responsive"
-                src="/works/blackjack/betting.webp"
+                src={Betting}
+                placeholder="blur"
                 alt="betting screen"
             />
             <Image
-                height="681px"
-                width="946px"
-                layout="responsive"
-                src="/works/blackjack/game.webp"
+                src={Game}
+                placeholder="blur"
                 alt="Game screen"
             />
 

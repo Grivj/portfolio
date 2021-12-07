@@ -1,14 +1,15 @@
 import { Link, ListItem, Text, UnorderedList } from "@chakra-ui/react"
 import Image from "next/image"
 import Work, { WorkBody, WorkHeader, WorkSectionTitle } from "../../components/App/Work"
-
+import GradCam from "../../public/works/xrays/grad-cam.webp"
+import ThumbXrays from "../../public/works/xrays/thumbnail.webp"
 
 const WorkXrays = () => (
     <Work>
         <WorkHeader
             title="Covid detection via X-Rays chest scans"
             intro="[Proof of concept] Using chest scans to identify if a patient has Covid-19"
-            thumbnailPath="/works/xrays/thumbnail.webp"
+            thumbnail={ThumbXrays}
             tags={["PyTorch", "Python", "Jupyter Notebook", "FastAI"]}
 
         />
@@ -38,9 +39,8 @@ const WorkXrays = () => (
                 You can see it on a few samples:
             </Text>
             <Image
-                width="950px"
-                height="871px"
-                src="/works/xrays/grad-cam.webp"
+                src={GradCam}
+                placeholder="blur"
                 alt="Consistency b"
             />
 

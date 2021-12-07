@@ -5,6 +5,7 @@ import NextLink from "next/link"
 import { useRouter } from "next/router"
 import React, { Children } from "react"
 
+
 interface PaneProps {
     title: string
     defaultIsOpen?: boolean
@@ -57,11 +58,11 @@ const Pane: React.FC<PaneProps> = ({ title, defaultIsOpen, children }) => {
 interface ItemProps {
     title: string
     intro: string
-    thumbnailPath: string
+    thumbnail: StaticImageData
     href: string
 }
 
-export const PaneItem = ({ title, intro, thumbnailPath, href }: ItemProps) => {
+export const PaneItem = ({ title, intro, thumbnail, href }: ItemProps) => {
     const router = useRouter()
     const isActive = href === router.asPath
     const backgroundColor = isActive ? "#37373D" : ""
@@ -76,10 +77,10 @@ export const PaneItem = ({ title, intro, thumbnailPath, href }: ItemProps) => {
             >
                 <Box position="relative" minWidth="48px" minHeight="48px">
                     <Image
-                        layout="fill"
-                        objectFit="contain"
+                        src={thumbnail}
+                        height="48px"
+                        width="48px"
                         alt="Pane thumbnail"
-                        src={thumbnailPath}
                     />
                 </Box>
                 <Box isTruncated>

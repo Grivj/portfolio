@@ -1,7 +1,14 @@
 import { ArrowForwardIcon } from "@chakra-ui/icons"
 import { Box, Container, Flex, Link, Tag, Text } from "@chakra-ui/react"
 import Image from "next/image"
+import ThumbBlackjack from "../../public/works/blackjack/thumbnail.webp"
+import ThumbCodewars from "../../public/works/codewars/thumbnail.webp"
+import ThumbDetection from "../../public/works/detection/thumbnail.webp"
+import ThumbPortfolio from "../../public/works/portfolio/thumbnail.webp"
+import ThumbXrays from "../../public/works/xrays/thumbnail.webp"
 import Pane, { PaneItem } from "./Pane"
+
+
 
 const Work: React.FC = ({ children }) => {
 
@@ -12,7 +19,7 @@ const Work: React.FC = ({ children }) => {
                     <PaneItem
                         title="Adversarial examples"
                         intro="[In Progress] AE detection via input transformation"
-                        thumbnailPath="/works/detection/thumbnail.webp"
+                        thumbnail={ThumbDetection}
                         href="/works/detection"
                     />
                 </Pane>
@@ -20,19 +27,19 @@ const Work: React.FC = ({ children }) => {
                     <PaneItem
                         title="Portfolio"
                         intro="My personal homepage"
-                        thumbnailPath="/works/portfolio/thumbnail.webp"
+                        thumbnail={ThumbPortfolio}
                         href="/works/portfolio"
                     />
                     <PaneItem
                         title="X-Ray Scans classification"
                         intro="Detecting Covid from X-Ray chest scans"
-                        thumbnailPath="/works/xrays/thumbnail.webp"
+                        thumbnail={ThumbXrays}
                         href="/works/xrays"
                     />
                     <PaneItem
                         title="Blackjack card counting trainer"
                         intro="[In Progress] Card counting trainer for Blackjack"
-                        thumbnailPath="/works/blackjack/thumbnail.webp"
+                        thumbnail={ThumbBlackjack}
                         href="/works/blackjack"
                     />
                 </Pane>
@@ -40,7 +47,7 @@ const Work: React.FC = ({ children }) => {
                     <PaneItem
                         title="Codewars"
                         intro="Personal contributions on Codewars.com"
-                        thumbnailPath="/works/codewars/thumbnail.webp"
+                        thumbnail={ThumbCodewars}
                         href="/works/codewars"
                     />
                 </Pane>
@@ -84,12 +91,12 @@ interface LinkProps {
 interface HeaderProps {
     title: string
     intro: string
-    thumbnailPath: string
+    thumbnail: StaticImageData
     tags?: string[]
     links?: LinkProps[]
 }
 
-export const WorkHeader = ({ title, intro, thumbnailPath, tags, links }: HeaderProps) => (
+export const WorkHeader = ({ title, intro, thumbnail, tags, links }: HeaderProps) => (
     <Flex
         direction={["column", "row"]}
         alignItems={["center", "left"]}
@@ -99,11 +106,8 @@ export const WorkHeader = ({ title, intro, thumbnailPath, tags, links }: HeaderP
         mb="20px"
     >
         <Image
-            height="100px"
-            width="100px"
+            src={thumbnail}
             alt="Work thumbnail"
-            objectFit="cover"
-            src={thumbnailPath}
         />
         <Box>
             <Text as="h1" fontSize="1.6em">{title}</Text>

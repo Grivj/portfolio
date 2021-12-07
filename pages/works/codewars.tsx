@@ -1,6 +1,7 @@
 import { Box, Link, Tag, Text } from "@chakra-ui/react"
 import Code from "../../components/App/Code"
 import Work, { WorkBody, WorkHeader, WorkSectionTitle } from "../../components/App/Work"
+import ThumbCodewars from "../../public/works/codewars/thumbnail.webp"
 
 const sudokuCode = `
 """
@@ -229,7 +230,7 @@ const WorkCodewars = () => (
         <WorkHeader
             title="Codewars"
             intro="Personal contributions on Codewars.com"
-            thumbnailPath="/works/codewars/thumbnail.webp"
+            thumbnail={ThumbCodewars}
             tags={["Python", "UnitTesting"]}
             links={
                 [

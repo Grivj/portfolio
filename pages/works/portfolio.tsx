@@ -1,6 +1,7 @@
 import { Text } from "@chakra-ui/react"
 import Code from "../../components/App/Code"
 import Work, { WorkBody, WorkHeader, WorkSectionTitle } from "../../components/App/Work"
+import ThumbPortfolio from "../../public/works/portfolio/thumbnail.webp"
 
 const ProjectRootCode = `
 $ROOT
@@ -19,7 +20,7 @@ const WorkPortfolio = () => (
         <WorkHeader
             title="My portfolio"
             intro="My personal homepage made with Next.js"
-            thumbnailPath="/works/portfolio/thumbnail.webp"
+            thumbnail={ThumbPortfolio}
             tags={["React.js", "Next.js", "Chackra UI", "TypeScript", "JavaScript", "Figma", "Vercel"]}
             links={
                 [

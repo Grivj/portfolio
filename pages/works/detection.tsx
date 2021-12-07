@@ -5,6 +5,22 @@ import {
 import Image from "next/image"
 import Code from "../../components/App/Code"
 import Work, { WorkBody, WorkHeader, WorkSectionTitle } from "../../components/App/Work"
+import Slide1 from "../../public/works/detection/0002.webp"
+import Slide2 from "../../public/works/detection/0004.webp"
+import Slide3 from "../../public/works/detection/0005.webp"
+import Slide4 from "../../public/works/detection/0006.webp"
+import Slide5 from "../../public/works/detection/0007.webp"
+import Slide6 from "../../public/works/detection/0008.webp"
+import Slide7 from "../../public/works/detection/0009.webp"
+import Slide8 from "../../public/works/detection/0010.webp"
+import Slide9 from "../../public/works/detection/0011.webp"
+import Graph1 from "../../public/works/detection/fig2a.webp"
+import Graph2 from "../../public/works/detection/fig2b.webp"
+import Graph3 from "../../public/works/detection/fig3a.webp"
+import Graph4 from "../../public/works/detection/fig3b.webp"
+import ThumbXrays from "../../public/works/xrays/thumbnail.webp"
+
+
 
 const metricsCode = `
 ...
@@ -94,7 +110,7 @@ const WorkDetection = () => (
         <WorkHeader
             title="Adversarial Examples detection"
             intro="[In Progress] Research conducted for my MS. degree."
-            thumbnailPath="/works/detection/thumbnail.webp"
+            thumbnail={ThumbXrays}
             tags={["Python", "PyTorch", "Jupyter Notebook", "Google Colab"]}
             links={
                 [
@@ -117,12 +133,10 @@ const WorkDetection = () => (
             <Flex wrap="wrap" m="10px auto" justifyContent="center">
                 <Popover id="1">
                     <PopoverTrigger>
-                        <Box width={{ base: "100%", md: "50%" }}>
+                        <Box width={{ base: "100%", md: "50%" }} minHeight="100%">
                             <Image
-                                height="465px"
-                                width="730px"
-                                layout="responsive"
-                                src="/works/detection/fig2a.webp"
+                                src={Graph1}
+                                placeholder="blur"
                                 alt="Consistency a"
                             />
                         </Box>
@@ -145,12 +159,10 @@ const WorkDetection = () => (
 
                 <Popover id="2">
                     <PopoverTrigger>
-                        <Box width={{ base: "100%", md: "50%" }}>
+                        <Box width={{ base: "100%", md: "50%" }} minHeight="100%">
                             <Image
-                                height="465px"
-                                width="730px"
-                                layout="responsive"
-                                src="/works/detection/fig2b.webp"
+                                src={Graph2}
+                                placeholder="blur"
                                 alt="Consistency b"
                             />
                         </Box>
@@ -175,10 +187,8 @@ const WorkDetection = () => (
                     <PopoverTrigger>
                         <Box width={{ base: "100%", md: "50%" }}>
                             <Image
-                                height="500px"
-                                width="730px"
-                                layout="responsive"
-                                src="/works/detection/fig3a.webp"
+                                src={Graph3}
+                                placeholder="blur"
                                 alt="Logits difference normal image"
                             />
                         </Box>
@@ -197,10 +207,8 @@ const WorkDetection = () => (
                     <PopoverTrigger>
                         <Box width={{ base: "100%", md: "50%" }}>
                             <Image
-                                height="500px"
-                                width="730px"
-                                layout="responsive"
-                                src="/works/detection/fig3b.webp"
+                                src={Graph4}
+                                placeholder="blur"
                                 alt="Logits difference BIM adversarial example"
                             />
                         </Box>
@@ -218,57 +226,48 @@ const WorkDetection = () => (
             <WorkSectionTitle>Presentation slides</WorkSectionTitle>
             <Flex wrap="wrap" m="10px auto" justifyContent="center">
                 <Image
-                    width="946px"
-                    height="533px"
-                    src="/works/detection/0002.webp"
+                    src={Slide1}
+                    placeholder="blur"
                     alt="Slide 1"
                 />
                 <Image
-                    width="946px"
-                    height="533px"
-                    src="/works/detection/0004.webp"
+                    src={Slide2}
+                    placeholder="blur"
                     alt="Slide 2"
                 />
                 <Image
-                    width="946px"
-                    height="533px"
-                    src="/works/detection/0005.webp"
+                    src={Slide3}
+                    placeholder="blur"
                     alt="Slide 3"
                 />
                 <Image
-                    width="946px"
-                    height="533px"
-                    src="/works/detection/0006.webp"
+                    src={Slide4}
+                    placeholder="blur"
                     alt="Slide 4"
                 />
                 <Image
-                    width="946px"
-                    height="533px"
-                    src="/works/detection/0007.webp"
+                    src={Slide5}
+                    placeholder="blur"
                     alt="Slide 5"
                 />
                 <Image
-                    width="946px"
-                    height="533px"
-                    src="/works/detection/0008.webp"
+                    src={Slide6}
+                    placeholder="blur"
                     alt="Slide 6"
                 />
                 <Image
-                    width="946px"
-                    height="533px"
-                    src="/works/detection/0009.webp"
+                    src={Slide7}
+                    placeholder="blur"
                     alt="Slide 7"
                 />
                 <Image
-                    width="946px"
-                    height="533px"
-                    src="/works/detection/0010.webp"
+                    src={Slide8}
+                    placeholder="blur"
                     alt="Slide 8"
                 />
                 <Image
-                    width="946px"
-                    height="533px"
-                    src="/works/detection/0011.webp"
+                    src={Slide9}
+                    placeholder="blur"
                     alt="Slide 9"
                 />
             </Flex>
