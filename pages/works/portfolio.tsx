@@ -20,7 +20,7 @@ const WorkPortfolio = () => (
             title="My portfolio"
             intro="My personal homepage made with Next.js"
             thumbnailPath="/works/portfolio/thumbnail.png"
-            tags={["React.js", "Next.js", "Chackra UI", "TypeScript", "JavaScript", "Figma"]}
+            tags={["React.js", "Next.js", "Chackra UI", "TypeScript", "JavaScript", "Figma", "Vercel"]}
             links={
                 [
                     { href: "https://github.com/Grivj/portfolio", title: "GitHub" },

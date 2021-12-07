@@ -79,6 +79,7 @@ export const PaneItem = ({ title, intro, thumbnailPath, href }: ItemProps) => {
                     h="42px"
                     w="42px"
                     alt="Pane thumbnail"
+                    objectFit="cover"
                     src={thumbnailPath}
                 />
                 <Box isTruncated>

@@ -101,6 +101,7 @@ export const WorkHeader = ({ title, intro, thumbnailPath, tags, links }: HeaderP
             h="100px"
             w="100px"
             alt="Work thumbnail"
+            objectFit="cover"
             src={thumbnailPath}
         />
         <Box>
