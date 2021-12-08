@@ -19,7 +19,7 @@ Life was good, and every day was about learning something new.
 After these six months of experimenting with life in China, I was even more determined to come again...
 
 **So ...** I searched for a few weeks and landed some appealing jobs.
-But despite the agreements from the companies, my visa applications were all rejected 🥲.
+But despite the agreements from the companies, my visa applications were all rejected.
 Seeing that this approach wasn't leading anywhere and that getting a working visa would require me to get at least an MS. degree, I dipped into my savings once again to apply for a one-year Mandarin learning program at Hunan University.
 I wanted to learn Chinese the right way and then continue with a Master's degree once more acclimated to the culture and language.
 

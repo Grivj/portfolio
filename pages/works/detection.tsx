@@ -18,8 +18,7 @@ import Graph1 from "../../public/works/detection/fig2a.webp"
 import Graph2 from "../../public/works/detection/fig2b.webp"
 import Graph3 from "../../public/works/detection/fig3a.webp"
 import Graph4 from "../../public/works/detection/fig3b.webp"
-import ThumbXrays from "../../public/works/xrays/thumbnail.webp"
-
+import ThumbDetection from "../../public/works/detection/thumbnail.webp"
 
 
 const metricsCode = `
@@ -110,7 +109,7 @@ const WorkDetection = () => (
         <WorkHeader
             title="Adversarial Examples detection"
             intro="[In Progress] Research conducted for my MS. degree."
-            thumbnail={ThumbXrays}
+            thumbnail={ThumbDetection}
             tags={["Python", "PyTorch", "Jupyter Notebook", "Google Colab"]}
             links={
                 [
