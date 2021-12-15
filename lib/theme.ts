@@ -3,11 +3,11 @@ import { extendTheme } from "@chakra-ui/react";
 const styles = {
   global: {
     body: {
-      fontFamily: "Segoe UI",
-      fontSize: "18px",
-      bgGradient: "linear(to-tl, #7928CA, #FF0080)",
       textRendering: "optimizeLegibility",
       WebkitFontSmoothing: "antialiased",
+      backgroundColor: "#4158D0",
+      backgroundImage:
+        "linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)",
     },
     ":not(.chakra-dont-set-collapse) > .chakra-collapse": {
       overflow: "auto !important",

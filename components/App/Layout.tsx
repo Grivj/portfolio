@@ -24,11 +24,10 @@ const Layout: React.FC<LayoutProps> = ({ isMaximized, setIsMaximized, children }
             <Flex
                 direction="column"
                 bg="#1E1E1E"
-                opacity="0.95"
-                borderRadius={isMaximized ? "0" : { base: "0", lg: "10px" }}
+                borderRadius={isMaximized ? "0" : { base: "0", lg: "18px" }}
                 overflow="hidden"
                 fontSize={{ base: "16px" }}
-                boxShadow={isMaximized ? "" : "dark-lg"}
+                boxShadow={isMaximized ? "" : "0px 20px 80px 0px rgb(0 0 0 / 60%)"}
                 height={{ base: "auto", lg: "100%" }}
                 minHeight={{ base: "100%", lg: "auto" }}
             >

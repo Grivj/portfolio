@@ -11,12 +11,12 @@ Life is dull when not learning new stuff, so I make sure I keep learning, whatev
 
 My goal is to perfect the craft, and I aim to write clean, maintainable, and scalable code.
 
-I've recently been playing with those technologies:
+I've recently been playing with these technologies:
+    - [Python](https://www.python.org/)
+    - [PyTorch](https://pytorch.org/)
     - [React.js](https://reactjs.org/)
     - [Next.js](https://nextjs.org/)
     - [TypeScript](https://www.typescriptlang.org/)
-    - [Python](https://www.python.org/)
-    - [PyTorch](https://pytorch.org/)
 
 I ❤️:
     - music

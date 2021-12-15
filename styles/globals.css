@@ -41,21 +41,58 @@
 
 
 html,
-body {
-  height: 100%
-}
-
+body,
 #__next {
   height: 100%
 }
+
 
 body {
   padding: 0;
   margin: 0;
   font-family: Segoe UI, Cascadia Code, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
+  -webkit-animation: rotate-background 8s ease-in-out infinite;
+  animation: rotate-background 8s ease-in-out infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
 }
 
+@keyframes rotate-background {
+  0% {
+    -webkit-backdrop-filter: backdrop-hue-rotate(-43deg);
+    -moz-backdrop-filter: hue-rotate(-43deg);
+    -ms-backdrop-filter: hue-rotate(-43deg);
+    -webkit-backdrop-filter: hue-rotate(-43deg);
+    backdrop-filter: hue-rotate(-43deg);
+  }
+
+  100% {
+    -webkit-backdrop-filter: hue-rotate(43deg);
+    -moz-backdrop-filter: hue-rotate(43deg);
+    -ms-backdrop-filter: hue-rotate(43deg);
+    -webkit-backdrop-filter: hue-rotate(43deg);
+    backdrop-filter: hue-rotate(43deg);
+  }
+}
+
+@-webkit-keyframes rotate-background {
+  0% {
+    -webkit-backdrop-filter: backdrop-hue-rotate(-43deg);
+    -moz-backdrop-filter: hue-rotate(-43deg);
+    -ms-backdrop-filter: hue-rotate(-43deg);
+    -webkit-backdrop-filter: hue-rotate(-43deg);
+    backdrop-filter: hue-rotate(-43deg);
+  }
+
+  100% {
+    -webkit-backdrop-filter: hue-rotate(43deg);
+    -moz-backdrop-filter: hue-rotate(43deg);
+    -ms-backdrop-filter: hue-rotate(43deg);
+    -webkit-backdrop-filter: hue-rotate(43deg);
+    backdrop-filter: hue-rotate(43deg);
+  }
+}
 
 
 a {

@@ -1,4 +1,3 @@
-import { Flex } from '@chakra-ui/react'
 import Meta from '../Meta'
 
 interface LayoutProps {
