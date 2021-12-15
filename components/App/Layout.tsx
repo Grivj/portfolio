@@ -16,7 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ isMaximized, setIsMaximized, children }
 
     return (
         <Container
-            maxWidth={isMaximized ? "100%" : { base: "100%", lg: "990px" }}
+            maxWidth={isMaximized ? "100%" : { base: "100%", lg: "991px", '2xl': "1200px" }}
             p={isMaximized ? "0" : { base: "0", lg: "10ch 0" }}
             height="100%"
             transitionDuration="0.5s"
