@@ -5,8 +5,8 @@ const styles = {
     body: {
       textRendering: "optimizeLegibility",
       WebkitFontSmoothing: "antialiased",
-      backgroundImage:
-        "linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)",
+      background:
+        "linear-gradient(45deg, #1f005c, #48005f, #680060, #830060, #9c155f, #b22c5e, #c5415d, #d5585c, #e36e5c, #ef865e, #f89d63, #ffb56b)",
     },
     ":not(.chakra-dont-set-collapse) > .chakra-collapse": {
       overflow: "auto !important",
