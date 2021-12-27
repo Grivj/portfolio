@@ -129,7 +129,7 @@ const WorkDetection = () => (
             <WorkSectionTitle>Some graphics from the paper</WorkSectionTitle>
             <Text fontStyle="italic" fontSize="0.8em" opacity="0.5">Graphs can be clicked to get additional information.</Text>
 
-            <Flex wrap="wrap" m="10px auto" justifyContent="center">
+            <Flex wrap="wrap" m="10px auto" justifyContent="center" color="black">
                 <Popover id="1">
                     <PopoverTrigger>
                         <Box width={{ base: "100%", md: "50%" }} minHeight="100%">
