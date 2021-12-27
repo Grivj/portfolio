@@ -16,7 +16,7 @@ const CodeContent = `
 
 const CascadiaLink = ({ title, href }: { title: string, href: string }) => (
   <Link isExternal href={href}>
-    <Button fontFamily="Cascadia Code" color="rgb(255, 204, 153)">
+    <Button fontFamily="Cascadia Code" color="rgb(255, 204, 153)" background="transparent">
       {title}
       <ExternalLinkIcon mx='2px' />
     </Button>
