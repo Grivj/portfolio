@@ -20,7 +20,7 @@ const CascadiaLink = ({ title, href }: { title: string, href: string }) => (
       fontFamily="Cascadia Code" 
       color="rgb(255, 204, 153)" 
       background="transparent"
-      _hover="initial"
+      _hover={{background:"initial"}}
       >
       {title}
       <ExternalLinkIcon mx='2px' />
