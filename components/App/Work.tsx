@@ -70,6 +70,7 @@ const WorkRightContainer: React.FC = ({ children }) => (
     <Flex
         direction="column"
         bg="#252526"
+        overflow="auto"
         w={{ base: "100%", lg: "200px", xl: "300px" }}
         minWidth={{ base: "100%", lg: "200px", xl: "300px" }}
     >
